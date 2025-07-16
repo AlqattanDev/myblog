@@ -29,5 +29,6 @@ export default defineConfig({
       ]
     }
   },
-  site: 'https://alqattandev.github.io/myblog' // GitHub Pages URL
+  site: 'https://alqattandev.github.io/myblog', // GitHub Pages URL
+  base: '/myblog' // Repository name for GitHub Pages subdirectory
 });
