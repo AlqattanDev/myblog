@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { ContentManager } from '../utils/content-manager.js';
 
-// Initialize content manager and get all posts
+// Initialize content manager and get recent posts for the blog section
 const contentManager = new ContentManager();
 const allPosts = await contentManager.getAllPosts();
 
@@ -12,76 +12,216 @@ const contentSources = contentManager.getContentSources();
 console.log('Content sources:', contentSources);
 console.log(`Loaded ${allPosts.length} posts`);
 
-// Filter posts that can be rendered (local content collections only for now)
+// Filter posts that can be rendered and get the latest 3 for portfolio display
 const renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');
-const githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));
+const recentPosts = renderablePosts.slice(0, 3);
 ---
 
 <BaseLayout 
-  title="Ali Alqattan's Blog" 
-  description="Thoughts on software development, technology, and more"
+  title="Ali Alqattan - Software Developer & Portfolio" 
+  description="Software developer passionate about building innovative solutions. Explore my projects, blog, and technical journey."
 >
-  <div class="mx-auto max-w-4xl px-4 py-12">
-    <!-- Hero Section -->
-    <header class="mb-12 text-center">
-      <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-6xl">
-        Welcome to my blog
-      </h1>
-      <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 sm:text-xl">
-        Thoughts on software development, technology, and the craft of building things
-      </p>
-    </header>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-tertiary py-20 sm:py-32">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold text-theme-text-primary sm:text-6xl">
+          Hi, I'm <span class="text-theme-accent-primary">Ali Alqattan</span>
+        </h1>
+        <p class="mt-6 text-lg text-theme-text-secondary sm:text-xl max-w-2xl mx-auto">
+          Software developer passionate about building innovative solutions with modern technologies. 
+          I love creating efficient, scalable applications and sharing knowledge through writing.
+        </p>
+        <div class="mt-8 flex justify-center gap-4">
+          <a href="#projects" class="theme-button">
+            View My Work
+          </a>
+          <a href="#contact" class="inline-flex items-center px-6 py-3 border border-theme-border-primary text-theme-text-primary hover:bg-theme-bg-secondary rounded-lg transition-colors">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Posts Section -->
-    <section>
-      <h2 class="mb-8 text-2xl font-semibold text-gray-900 dark:text-gray-100">
-        Latest Posts
-      </h2>
+  <!-- About Section -->
+  <section class="py-16 bg-theme-bg-primary" id="about">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-theme-text-primary mb-4">About Me</h2>
+        <p class="text-lg text-theme-text-secondary max-w-2xl mx-auto">
+          I'm a passionate software developer with expertise in modern web technologies, 
+          backend systems, and cloud infrastructure. I enjoy solving complex problems and 
+          building user-centric applications.
+        </p>
+      </div>
       
-      {renderablePosts.length === 0 ? (
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="theme-card text-center">
+          <div class="text-theme-accent-primary text-3xl mb-4">💻</div>
+          <h3 class="text-xl font-semibold text-theme-text-primary mb-2">Full-Stack Development</h3>
+          <p class="text-theme-text-secondary">
+            Experience with React, Node.js, Python, and modern frameworks for building scalable applications.
+          </p>
+        </div>
+        
+        <div class="theme-card text-center">
+          <div class="text-theme-accent-primary text-3xl mb-4">☁️</div>
+          <h3 class="text-xl font-semibold text-theme-text-primary mb-2">Cloud & DevOps</h3>
+          <p class="text-theme-text-secondary">
+            Proficient in AWS, Docker, CI/CD pipelines, and infrastructure as code for reliable deployments.
+          </p>
+        </div>
+        
+        <div class="theme-card text-center">
+          <div class="text-theme-accent-primary text-3xl mb-4">🚀</div>
+          <h3 class="text-xl font-semibold text-theme-text-primary mb-2">Innovation & Learning</h3>
+          <p class="text-theme-text-secondary">
+            Always exploring new technologies, contributing to open source, and sharing knowledge with the community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="py-16 bg-theme-bg-secondary" id="skills">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-theme-text-primary mb-4">Technical Skills</h2>
+        <p class="text-lg text-theme-text-secondary">
+          Technologies and tools I work with regularly
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="theme-card">
+          <h3 class="text-xl font-semibold text-theme-text-primary mb-4">Frontend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">JavaScript</span>
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">TypeScript</span>
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">React</span>
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">Astro</span>
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">Tailwind CSS</span>
+          </div>
+        </div>
+        
+        <div class="theme-card">
+          <h3 class="text-xl font-semibold text-theme-text-primary mb-4">Backend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">Node.js</span>
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">PostgreSQL</span>
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">MongoDB</span>
+            <span class="px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm">GraphQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="py-16 bg-theme-bg-primary" id="projects">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-theme-text-primary mb-4">Featured Projects</h2>
+        <p class="text-lg text-theme-text-secondary">
+          Some of the projects I've been working on
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="theme-card">
+          <h3 class="text-xl font-semibold text-theme-text-primary mb-2">GitHub-Synced Blog</h3>
+          <p class="text-theme-text-secondary mb-4">
+            A modern blog system built with Astro that automatically syncs content from GitHub repositories, 
+            featuring advanced markdown processing, Mermaid diagrams, and syntax highlighting.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs">Astro</span>
+            <span class="px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs">TypeScript</span>
+            <span class="px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs">GitHub API</span>
+          </div>
+          <div class="flex gap-4">
+            <a href="#blog" class="theme-link">View Live</a>
+            <a href="https://github.com/alqattandev/myblog" class="theme-link">GitHub</a>
+          </div>
+        </div>
+        
+        <div class="theme-card">
+          <h3 class="text-xl font-semibold text-theme-text-primary mb-2">Coming Soon</h3>
+          <p class="text-theme-text-secondary mb-4">
+            More projects will be showcased here soon. I'm currently working on several exciting 
+            full-stack applications and open-source contributions.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs">React</span>
+            <span class="px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs">Node.js</span>
+            <span class="px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs">AWS</span>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-theme-text-muted">In Development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="py-16 bg-theme-bg-secondary" id="blog">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-theme-text-primary mb-4">Latest Blog Posts</h2>
+        <p class="text-lg text-theme-text-secondary">
+          Sharing thoughts on software development and technology
+        </p>
+      </div>
+      
+      {recentPosts.length === 0 ? (
         <div class="text-center py-12">
-          <p class="text-gray-600 dark:text-gray-400">No posts published yet. Check back soon!</p>
+          <p class="text-theme-text-secondary">No posts published yet. Check back soon!</p>
         </div>
       ) : (
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
-          {renderablePosts.map((post) => (
+          {recentPosts.map((post) => (
             <PostCard post={post} />
           ))}
         </div>
       )}
+      
+      <div class="text-center mt-8">
+        <a href={`${import.meta.env.BASE_URL}blog`} class="theme-button">
+          View All Posts
+        </a>
+      </div>
+    </div>
+  </section>
 
-      {/* GitHub Content Preview */}
-      {githubOnlyPosts.length > 0 && (
-        <div class="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
-          <h3 class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">
-            📡 GitHub Content Available
-          </h3>
-          <p class="text-blue-800 dark:text-blue-200 text-sm mb-3">
-            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.
-          </p>
-          <div class="space-y-2">
-            {githubOnlyPosts.map((post) => (
-              <div class="text-sm text-blue-700 dark:text-blue-300">
-                • <strong>{post.data.title}</strong> ({post.slug})
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-    </section>
-
-    <!-- About Section -->
-    <section class="mt-16 border-t border-gray-200 dark:border-gray-700 pt-12">
-      <div class="text-center">
-        <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-          About This Blog
-        </h2>
-        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          This blog is built with Astro and automatically syncs content from a GitHub repository. 
-          It features advanced markdown processing, Mermaid diagrams, syntax highlighting, and a 
-          modern responsive design.
+  <!-- Contact Section -->
+  <section class="py-16 bg-theme-bg-primary" id="contact">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-theme-text-primary mb-4">Get In Touch</h2>
+        <p class="text-lg text-theme-text-secondary max-w-2xl mx-auto">
+          I'm always interested in new opportunities and collaborations. 
+          Feel free to reach out if you'd like to work together!
         </p>
       </div>
-    </section>
-  </div>
+      
+      <div class="flex justify-center gap-6">
+        <a href="mailto:contact@alialqattan.dev" class="theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform">
+          <span class="text-theme-accent-primary text-xl">📧</span>
+          <span class="text-theme-text-primary">Email</span>
+        </a>
+        <a href="https://github.com/alqattanddev" class="theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform">
+          <span class="text-theme-accent-primary text-xl">👨‍💻</span>
+          <span class="text-theme-text-primary">GitHub</span>
+        </a>
+        <a href="https://linkedin.com/in/alialqattan" class="theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform">
+          <span class="text-theme-accent-primary text-xl">💼</span>
+          <span class="text-theme-text-primary">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

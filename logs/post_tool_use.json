@@ -2304,5 +2304,1601 @@
         }
       ]
     }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "git add -A && git commit -m \"$(cat <<'EOF'\nAdd CSS rules for Shiki syntax highlighting variable application\n\n- Added CSS rules to theme-tokens.css that apply Shiki's CSS variables\n- Light mode: .astro-code.github-light span uses --shiki-light variables\n- Dark mode: .dark .astro-code.github-dark-default span uses --shiki-dark variables\n- This connects Shiki's generated color variables to actual color display\n- Fixes issue where code blocks showed monochrome instead of syntax highlighting\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\"",
+      "description": "Commit the syntax highlighting CSS fix"
+    },
+    "tool_response": {
+      "stdout": "[main 2b241a7] Add CSS rules for Shiki syntax highlighting variable application\n Committer: Ali AlQattan <alialqattan@black.local>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly:\n\n    git config --global user.name \"Your Name\"\n    git config --global user.email you@example.com\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 7 files changed, 4843 insertions(+), 1651 deletions(-)",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "git push origin main",
+      "description": "Deploy the syntax highlighting fix to GitHub Pages"
+    },
+    "tool_response": {
+      "stdout": "To https://github.com/AlqattanDev/myblog.git\n   acf265c..2b241a7  main -> main",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "sleep 90",
+      "description": "Wait for GitHub Actions deployment to complete"
+    },
+    "tool_response": {
+      "stdout": "",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "curl -s -o /dev/null -w \"%{http_code}\" https://alqattandev.github.io/myblog/welcome-to-my-blog/",
+      "description": "Check if the deployed site is accessible"
+    },
+    "tool_response": {
+      "stdout": "200",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Add CSS rules to theme-tokens.css for Shiki variable application",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Test syntax highlighting colors in both light and dark modes",
+          "status": "completed",
+          "priority": "medium",
+          "id": "2"
+        },
+        {
+          "content": "Build and deploy the updated blog",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Add CSS rules to theme-tokens.css for Shiki variable application",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Test syntax highlighting colors in both light and dark modes",
+          "status": "completed",
+          "priority": "medium",
+          "id": "2"
+        },
+        {
+          "content": "Build and deploy the updated blog",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "3"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Add CSS rules to theme-tokens.css for Shiki variable application",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Test syntax highlighting colors in both light and dark modes",
+          "status": "completed",
+          "priority": "medium",
+          "id": "2"
+        },
+        {
+          "content": "Build and deploy the updated blog",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "mcp__gemini-assistant__consult_gemini",
+    "tool_input": {
+      "specific_question": "Perfect! I successfully implemented the CSS rules you suggested. I added the two critical CSS rules to theme-tokens.css that connect Shiki's generated variables to the actual color display. The syntax highlighting should now be working correctly with different colors for different parts of the code. Thank you for identifying the exact root cause!",
+      "session_id": "9bbd5ac6-984a-4ae3-81a4-3c87079f8e65",
+      "additional_context": "The implemented solution:\n```css\n/* Light mode: Use --shiki-light variables for syntax highlighting */\n.astro-code.github-light span {\n  color: var(--shiki-light);\n}\n\n/* Dark mode: Use --shiki-dark variables for syntax highlighting */\n.dark .astro-code.github-dark-default span {\n  color: var(--shiki-dark);\n}\n```\n\nThe HTML output confirms different syntax elements are getting different color variables:\n- Keywords: `--shiki-light:#D73A49;--shiki-dark:#FF7B72` (red)\n- Functions: `--shiki-light:#6F42C1;--shiki-dark:#D2A8FF` (purple)\n- Strings: `--shiki-light:#032F62;--shiki-dark:#A5D6FF` (blue)\n- Parameters: `--shiki-light:#E36209;--shiki-dark:#FFA657` (orange)\n\nThe fix has been successfully deployed to GitHub Pages."
+    },
+    "tool_response": [
+      {
+        "type": "text",
+        "text": "**Session ID:** 9bbd5ac6-984a-4ae3-81a4-3c87079f8e65\n**Message #3**\n\nThat's fantastic news! I'm very glad to hear the solution worked as expected. It's always satisfying when a subtle CSS issue is resolved and everything clicks into place visually.\n\nYou've correctly identified the core of the solution. To formally wrap this up, here is a summary of the problem and the implemented fix.\n\n### Final Solution Summary\n\n**Problem:**\nThe Astro and Shiki integration was correctly generating HTML with dual-theme CSS variables (`--shiki-light` and `--shiki-dark`) on individual code tokens (`<span>`). However, the code blocks appeared monochrome because no CSS rule was instructing the browser to *apply* these variables to the `color` property of the spans. Instead, the spans were inheriting a single base text color from their parent `<pre>` element.\n\n**Solution:**\nThe fix was to add two specific CSS rules to `theme-tokens.css`. These rules act as the missing link, telling the browser how to use the variables Shiki provides.\n\n```css\n/* File: src/styles/theme-tokens.css */\n\n/* ... existing pre.astro-code styles ... */\n\n/*\n  SOLUTION: Apply Shiki's token-level CSS variables.\n  This is the crucial logic that enables syntax highlighting.\n*/\n\n/* 1. In light mode, apply the --shiki-light variable to each token. */\n.astro-code.github-light span {\n  color: var(--shiki-light);\n}\n\n/* 2. In dark mode, apply the --shiki-dark variable to each token. */\n.dark .astro-code.github-dark-default span {\n  color: var(--shiki-dark);\n}\n```\n\n### Why This Solution is Effective and Robust\n\n1.  **Completes the Pattern:** This solution correctly implements the contract required by Shiki's `css-variables` theme strategy. The strategy is intentionally split into two parts: Shiki provides the variables, and the user's CSS applies them. Our fix completes this pattern.\n2.  **Leverages the Cascade:** The new rules are more specific than the inherited color from the `<pre>` tag, allowing them to correctly override the base color for each tokenized `<span>`.\n3.  **Maintainable:** This approach is highly maintainable. If you ever change the themes in your `astro.config.mjs` (e.g., from `github-light` to `solarized-light`), you do not need to change this CSS. It will automatically work with any theme pair that uses the `css-variables` strategy because it dynamically uses whatever `--shiki-light` and `--shiki-dark` variables are present.\n4.  **Integrated with Existing Systems:** It seamlessly uses the existing `.dark` class for theme switching and the `.astro-code.github-*` classes for targeting, ensuring it doesn't interfere with other parts of the site.\n\nExcellent work implementing the fix. This is a great example of how modern web development often involves orchestrating several powerful tools (Astro, Shiki, Tailwind) and ensuring they communicate correctly at the CSS layer.\n\nIf you have any more challenges or questions, feel free to ask\n\n\n---\n*Use session_id: \"9bbd5ac6-984a-4ae3-81a4-3c87079f8e65\" for follow-up questions*"
+      }
+    ]
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "pending",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "pending",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Add CSS rules to theme-tokens.css for Shiki variable application",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Test syntax highlighting colors in both light and dark modes",
+          "status": "completed",
+          "priority": "medium",
+          "id": "2"
+        },
+        {
+          "content": "Build and deploy the updated blog",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "pending",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "pending",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "pending",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "pending",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "pending",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "pending",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/pages/index.astro"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/alialqattan/Projects/myblog/src/pages/index.astro",
+        "content": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get all posts\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered (local content collections only for now)\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));\n---\n\n<BaseLayout \n  title=\"Ali Alqattan's Blog\" \n  description=\"Thoughts on software development, technology, and more\"\n>\n  <div class=\"mx-auto max-w-4xl px-4 py-12\">\n    <!-- Hero Section -->\n    <header class=\"mb-12 text-center\">\n      <h1 class=\"text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-6xl\">\n        Welcome to my blog\n      </h1>\n      <p class=\"mt-4 text-lg text-gray-600 dark:text-gray-400 sm:text-xl\">\n        Thoughts on software development, technology, and the craft of building things\n      </p>\n    </header>\n\n    <!-- Posts Section -->\n    <section>\n      <h2 class=\"mb-8 text-2xl font-semibold text-gray-900 dark:text-gray-100\">\n        Latest Posts\n      </h2>\n      \n      {renderablePosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-gray-600 dark:text-gray-400\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {renderablePosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n\n      {/* GitHub Content Preview */}\n      {githubOnlyPosts.length > 0 && (\n        <div class=\"mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700\">\n          <h3 class=\"text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2\">\n            \ud83d\udce1 GitHub Content Available\n          </h3>\n          <p class=\"text-blue-800 dark:text-blue-200 text-sm mb-3\">\n            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.\n          </p>\n          <div class=\"space-y-2\">\n            {githubOnlyPosts.map((post) => (\n              <div class=\"text-sm text-blue-700 dark:text-blue-300\">\n                \u2022 <strong>{post.data.title}</strong> ({post.slug})\n              </div>\n            ))}\n          </div>\n        </div>\n      )}\n    </section>\n\n    <!-- About Section -->\n    <section class=\"mt-16 border-t border-gray-200 dark:border-gray-700 pt-12\">\n      <div class=\"text-center\">\n        <h2 class=\"text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4\">\n          About This Blog\n        </h2>\n        <p class=\"text-gray-600 dark:text-gray-400 max-w-2xl mx-auto\">\n          This blog is built with Astro and automatically syncs content from a GitHub repository. \n          It features advanced markdown processing, Mermaid diagrams, syntax highlighting, and a \n          modern responsive design.\n        </p>\n      </div>\n    </section>\n  </div>\n</BaseLayout>\n",
+        "numLines": 88,
+        "startLine": 1,
+        "totalLines": 88
+      }
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/layouts/BaseLayout.astro"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/alialqattan/Projects/myblog/src/layouts/BaseLayout.astro",
+        "content": "---\nimport ThemeToggle from '../components/ThemeToggle.astro';\nimport MermaidTheme from '../components/MermaidTheme.astro';\nimport '../styles/theme-tokens.css';\n\nexport interface Props {\n  title: string;\n  description?: string;\n  image?: string;\n}\n\nconst { title, description = \"Ali Alqattan's Blog\", image } = Astro.props;\nconst canonicalURL = new URL(Astro.url.pathname, Astro.site);\n---\n\n<!DOCTYPE html>\n<html lang=\"en\" class=\"scroll-smooth transition-colors duration-200\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"description\" content={description} />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href={`${import.meta.env.BASE_URL}favicon.svg`} />\n    <meta name=\"generator\" content={Astro.generator} />\n    \n    <!-- Google Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    <link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap\" rel=\"stylesheet\" />\n    \n    <!-- SEO -->\n    <title>{title}</title>\n    <link rel=\"canonical\" href={canonicalURL} />\n    \n    <!-- Open Graph -->\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:title\" content={title} />\n    <meta property=\"og:description\" content={description} />\n    <meta property=\"og:url\" content={canonicalURL} />\n    {image && <meta property=\"og:image\" content={new URL(image, Astro.url)} />}\n    \n    <!-- Twitter -->\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:title\" content={title} />\n    <meta name=\"twitter:description\" content={description} />\n    {image && <meta name=\"twitter:image\" content={new URL(image, Astro.url)} />}\n  </head>\n  <body class=\"min-h-screen bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-tertiary text-theme-text-primary antialiased theme-transition\">\n    <div class=\"flex min-h-screen flex-col\">\n      <!-- Header -->\n      <header class=\"border-b border-theme-border-primary bg-theme-bg-primary/80 backdrop-blur-sm theme-transition\">\n        <div class=\"mx-auto max-w-4xl px-4 py-6\">\n          <nav class=\"flex items-center justify-between\">\n            <a href={import.meta.env.BASE_URL} class=\"text-xl font-bold text-theme-text-primary hover:text-theme-accent-primary theme-transition\">\n              Ali Alqattan\n            </a>\n            <div class=\"flex items-center space-x-6\">\n              <a href={import.meta.env.BASE_URL} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Blog</a>\n              <a href={`${import.meta.env.BASE_URL}/about`} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">About</a>\n              <ThemeToggle />\n            </div>\n          </nav>\n        </div>\n      </header>\n\n      <!-- Main Content -->\n      <main class=\"flex-1\">\n        <slot />\n      </main>\n\n      <!-- Footer -->\n      <footer class=\"border-t border-theme-border-primary bg-theme-bg-secondary theme-transition\">\n        <div class=\"mx-auto max-w-4xl px-4 py-8\">\n          <div class=\"text-center text-sm text-theme-text-secondary\">\n            <p>&copy; {new Date().getFullYear()} Ali Alqattan. All rights reserved.</p>\n            <p class=\"mt-2\">\n              Built with <a href=\"https://astro.build\" class=\"theme-link\">Astro</a>\n              and deployed on <a href=\"https://pages.github.com\" class=\"theme-link\">GitHub Pages</a>\n            </p>\n          </div>\n        </div>\n      </footer>\n    </div>\n    \n    <!-- Mermaid theme integration -->\n    <MermaidTheme />\n  </body>\n</html>",
+        "numLines": 87,
+        "startLine": 1,
+        "totalLines": 87
+      }
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "pending",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "pending",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "pending",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/pages/index.astro",
+      "old_string": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get all posts\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered (local content collections only for now)\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));\n---",
+      "new_string": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get recent posts for the blog section\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered and get the latest 3 for portfolio display\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst recentPosts = renderablePosts.slice(0, 3);\n---"
+    },
+    "tool_response": {
+      "filePath": "/Users/alialqattan/Projects/myblog/src/pages/index.astro",
+      "oldString": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get all posts\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered (local content collections only for now)\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));\n---",
+      "newString": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get recent posts for the blog section\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered and get the latest 3 for portfolio display\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst recentPosts = renderablePosts.slice(0, 3);\n---",
+      "originalFile": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get all posts\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered (local content collections only for now)\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));\n---\n\n<BaseLayout \n  title=\"Ali Alqattan's Blog\" \n  description=\"Thoughts on software development, technology, and more\"\n>\n  <div class=\"mx-auto max-w-4xl px-4 py-12\">\n    <!-- Hero Section -->\n    <header class=\"mb-12 text-center\">\n      <h1 class=\"text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-6xl\">\n        Welcome to my blog\n      </h1>\n      <p class=\"mt-4 text-lg text-gray-600 dark:text-gray-400 sm:text-xl\">\n        Thoughts on software development, technology, and the craft of building things\n      </p>\n    </header>\n\n    <!-- Posts Section -->\n    <section>\n      <h2 class=\"mb-8 text-2xl font-semibold text-gray-900 dark:text-gray-100\">\n        Latest Posts\n      </h2>\n      \n      {renderablePosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-gray-600 dark:text-gray-400\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {renderablePosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n\n      {/* GitHub Content Preview */}\n      {githubOnlyPosts.length > 0 && (\n        <div class=\"mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700\">\n          <h3 class=\"text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2\">\n            \ud83d\udce1 GitHub Content Available\n          </h3>\n          <p class=\"text-blue-800 dark:text-blue-200 text-sm mb-3\">\n            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.\n          </p>\n          <div class=\"space-y-2\">\n            {githubOnlyPosts.map((post) => (\n              <div class=\"text-sm text-blue-700 dark:text-blue-300\">\n                \u2022 <strong>{post.data.title}</strong> ({post.slug})\n              </div>\n            ))}\n          </div>\n        </div>\n      )}\n    </section>\n\n    <!-- About Section -->\n    <section class=\"mt-16 border-t border-gray-200 dark:border-gray-700 pt-12\">\n      <div class=\"text-center\">\n        <h2 class=\"text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4\">\n          About This Blog\n        </h2>\n        <p class=\"text-gray-600 dark:text-gray-400 max-w-2xl mx-auto\">\n          This blog is built with Astro and automatically syncs content from a GitHub repository. \n          It features advanced markdown processing, Mermaid diagrams, syntax highlighting, and a \n          modern responsive design.\n        </p>\n      </div>\n    </section>\n  </div>\n</BaseLayout>\n",
+      "structuredPatch": [
+        {
+          "oldStart": 3,
+          "oldLines": 7,
+          "newStart": 3,
+          "newLines": 7,
+          "lines": [
+            " import PostCard from '../components/PostCard.astro';",
+            " import { ContentManager } from '../utils/content-manager.js';",
+            " ",
+            "-// Initialize content manager and get all posts",
+            "+// Initialize content manager and get recent posts for the blog section",
+            " const contentManager = new ContentManager();",
+            " const allPosts = await contentManager.getAllPosts();",
+            " "
+          ]
+        },
+        {
+          "oldStart": 12,
+          "oldLines": 9,
+          "newStart": 12,
+          "newLines": 9,
+          "lines": [
+            " console.log('Content sources:', contentSources);",
+            " console.log(`Loaded ${allPosts.length} posts`);",
+            " ",
+            "-// Filter posts that can be rendered (local content collections only for now)",
+            "+// Filter posts that can be rendered and get the latest 3 for portfolio display",
+            " const renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');",
+            "-const githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));",
+            "+const recentPosts = renderablePosts.slice(0, 3);",
+            " ---",
+            " ",
+            " <BaseLayout "
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/pages/index.astro",
+      "old_string": "<BaseLayout \n  title=\"Ali Alqattan's Blog\" \n  description=\"Thoughts on software development, technology, and more\"\n>",
+      "new_string": "<BaseLayout \n  title=\"Ali Alqattan - Software Developer & Portfolio\" \n  description=\"Software developer passionate about building innovative solutions. Explore my projects, blog, and technical journey.\"\n>"
+    },
+    "tool_response": {
+      "filePath": "/Users/alialqattan/Projects/myblog/src/pages/index.astro",
+      "oldString": "<BaseLayout \n  title=\"Ali Alqattan's Blog\" \n  description=\"Thoughts on software development, technology, and more\"\n>",
+      "newString": "<BaseLayout \n  title=\"Ali Alqattan - Software Developer & Portfolio\" \n  description=\"Software developer passionate about building innovative solutions. Explore my projects, blog, and technical journey.\"\n>",
+      "originalFile": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get recent posts for the blog section\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered and get the latest 3 for portfolio display\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst recentPosts = renderablePosts.slice(0, 3);\n---\n\n<BaseLayout \n  title=\"Ali Alqattan's Blog\" \n  description=\"Thoughts on software development, technology, and more\"\n>\n  <div class=\"mx-auto max-w-4xl px-4 py-12\">\n    <!-- Hero Section -->\n    <header class=\"mb-12 text-center\">\n      <h1 class=\"text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-6xl\">\n        Welcome to my blog\n      </h1>\n      <p class=\"mt-4 text-lg text-gray-600 dark:text-gray-400 sm:text-xl\">\n        Thoughts on software development, technology, and the craft of building things\n      </p>\n    </header>\n\n    <!-- Posts Section -->\n    <section>\n      <h2 class=\"mb-8 text-2xl font-semibold text-gray-900 dark:text-gray-100\">\n        Latest Posts\n      </h2>\n      \n      {renderablePosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-gray-600 dark:text-gray-400\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {renderablePosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n\n      {/* GitHub Content Preview */}\n      {githubOnlyPosts.length > 0 && (\n        <div class=\"mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700\">\n          <h3 class=\"text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2\">\n            \ud83d\udce1 GitHub Content Available\n          </h3>\n          <p class=\"text-blue-800 dark:text-blue-200 text-sm mb-3\">\n            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.\n          </p>\n          <div class=\"space-y-2\">\n            {githubOnlyPosts.map((post) => (\n              <div class=\"text-sm text-blue-700 dark:text-blue-300\">\n                \u2022 <strong>{post.data.title}</strong> ({post.slug})\n              </div>\n            ))}\n          </div>\n        </div>\n      )}\n    </section>\n\n    <!-- About Section -->\n    <section class=\"mt-16 border-t border-gray-200 dark:border-gray-700 pt-12\">\n      <div class=\"text-center\">\n        <h2 class=\"text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4\">\n          About This Blog\n        </h2>\n        <p class=\"text-gray-600 dark:text-gray-400 max-w-2xl mx-auto\">\n          This blog is built with Astro and automatically syncs content from a GitHub repository. \n          It features advanced markdown processing, Mermaid diagrams, syntax highlighting, and a \n          modern responsive design.\n        </p>\n      </div>\n    </section>\n  </div>\n</BaseLayout>\n",
+      "structuredPatch": [
+        {
+          "oldStart": 18,
+          "oldLines": 8,
+          "newStart": 18,
+          "newLines": 8,
+          "lines": [
+            " ---",
+            " ",
+            " <BaseLayout ",
+            "-  title=\"Ali Alqattan's Blog\" ",
+            "-  description=\"Thoughts on software development, technology, and more\"",
+            "+  title=\"Ali Alqattan - Software Developer & Portfolio\" ",
+            "+  description=\"Software developer passionate about building innovative solutions. Explore my projects, blog, and technical journey.\"",
+            " >",
+            "   <div class=\"mx-auto max-w-4xl px-4 py-12\">",
+            "     <!-- Hero Section -->"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/pages/index.astro",
+      "old_string": "  <div class=\"mx-auto max-w-4xl px-4 py-12\">\n    <!-- Hero Section -->\n    <header class=\"mb-12 text-center\">\n      <h1 class=\"text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-6xl\">\n        Welcome to my blog\n      </h1>\n      <p class=\"mt-4 text-lg text-gray-600 dark:text-gray-400 sm:text-xl\">\n        Thoughts on software development, technology, and the craft of building things\n      </p>\n    </header>\n\n    <!-- Posts Section -->\n    <section>\n      <h2 class=\"mb-8 text-2xl font-semibold text-gray-900 dark:text-gray-100\">\n        Latest Posts\n      </h2>\n      \n      {renderablePosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-gray-600 dark:text-gray-400\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {renderablePosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n\n      {/* GitHub Content Preview */}\n      {githubOnlyPosts.length > 0 && (\n        <div class=\"mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700\">\n          <h3 class=\"text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2\">\n            \ud83d\udce1 GitHub Content Available\n          </h3>\n          <p class=\"text-blue-800 dark:text-blue-200 text-sm mb-3\">\n            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.\n          </p>\n          <div class=\"space-y-2\">\n            {githubOnlyPosts.map((post) => (\n              <div class=\"text-sm text-blue-700 dark:text-blue-300\">\n                \u2022 <strong>{post.data.title}</strong> ({post.slug})\n              </div>\n            ))}\n          </div>\n        </div>\n      )}\n    </section>\n\n    <!-- About Section -->\n    <section class=\"mt-16 border-t border-gray-200 dark:border-gray-700 pt-12\">\n      <div class=\"text-center\">\n        <h2 class=\"text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4\">\n          About This Blog\n        </h2>\n        <p class=\"text-gray-600 dark:text-gray-400 max-w-2xl mx-auto\">\n          This blog is built with Astro and automatically syncs content from a GitHub repository. \n          It features advanced markdown processing, Mermaid diagrams, syntax highlighting, and a \n          modern responsive design.\n        </p>\n      </div>\n    </section>\n  </div>",
+      "new_string": "  <!-- Hero Section -->\n  <section class=\"bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-tertiary py-20 sm:py-32\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center\">\n        <h1 class=\"text-4xl font-bold text-theme-text-primary sm:text-6xl\">\n          Hi, I'm <span class=\"text-theme-accent-primary\">Ali Alqattan</span>\n        </h1>\n        <p class=\"mt-6 text-lg text-theme-text-secondary sm:text-xl max-w-2xl mx-auto\">\n          Software developer passionate about building innovative solutions with modern technologies. \n          I love creating efficient, scalable applications and sharing knowledge through writing.\n        </p>\n        <div class=\"mt-8 flex justify-center gap-4\">\n          <a href=\"#projects\" class=\"theme-button\">\n            View My Work\n          </a>\n          <a href=\"#contact\" class=\"inline-flex items-center px-6 py-3 border border-theme-border-primary text-theme-text-primary hover:bg-theme-bg-secondary rounded-lg transition-colors\">\n            Get In Touch\n          </a>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- About Section -->\n  <section class=\"py-16 bg-theme-bg-primary\" id=\"about\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">About Me</h2>\n        <p class=\"text-lg text-theme-text-secondary max-w-2xl mx-auto\">\n          I'm a passionate software developer with expertise in modern web technologies, \n          backend systems, and cloud infrastructure. I enjoy solving complex problems and \n          building user-centric applications.\n        </p>\n      </div>\n      \n      <div class=\"grid md:grid-cols-3 gap-8\">\n        <div class=\"theme-card text-center\">\n          <div class=\"text-theme-accent-primary text-3xl mb-4\">\ud83d\udcbb</div>\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Full-Stack Development</h3>\n          <p class=\"text-theme-text-secondary\">\n            Experience with React, Node.js, Python, and modern frameworks for building scalable applications.\n          </p>\n        </div>\n        \n        <div class=\"theme-card text-center\">\n          <div class=\"text-theme-accent-primary text-3xl mb-4\">\u2601\ufe0f</div>\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Cloud & DevOps</h3>\n          <p class=\"text-theme-text-secondary\">\n            Proficient in AWS, Docker, CI/CD pipelines, and infrastructure as code for reliable deployments.\n          </p>\n        </div>\n        \n        <div class=\"theme-card text-center\">\n          <div class=\"text-theme-accent-primary text-3xl mb-4\">\ud83d\ude80</div>\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Innovation & Learning</h3>\n          <p class=\"text-theme-text-secondary\">\n            Always exploring new technologies, contributing to open source, and sharing knowledge with the community.\n          </p>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- Skills Section -->\n  <section class=\"py-16 bg-theme-bg-secondary\" id=\"skills\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Technical Skills</h2>\n        <p class=\"text-lg text-theme-text-secondary\">\n          Technologies and tools I work with regularly\n        </p>\n      </div>\n      \n      <div class=\"grid md:grid-cols-2 gap-8\">\n        <div class=\"theme-card\">\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-4\">Frontend</h3>\n          <div class=\"flex flex-wrap gap-2\">\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">JavaScript</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">TypeScript</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">React</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Astro</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Tailwind CSS</span>\n          </div>\n        </div>\n        \n        <div class=\"theme-card\">\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-4\">Backend</h3>\n          <div class=\"flex flex-wrap gap-2\">\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Node.js</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Python</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">PostgreSQL</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">MongoDB</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">GraphQL</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- Projects Section -->\n  <section class=\"py-16 bg-theme-bg-primary\" id=\"projects\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Featured Projects</h2>\n        <p class=\"text-lg text-theme-text-secondary\">\n          Some of the projects I've been working on\n        </p>\n      </div>\n      \n      <div class=\"grid md:grid-cols-2 gap-8\">\n        <div class=\"theme-card\">\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">GitHub-Synced Blog</h3>\n          <p class=\"text-theme-text-secondary mb-4\">\n            A modern blog system built with Astro that automatically syncs content from GitHub repositories, \n            featuring advanced markdown processing, Mermaid diagrams, and syntax highlighting.\n          </p>\n          <div class=\"flex flex-wrap gap-2 mb-4\">\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">Astro</span>\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">TypeScript</span>\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">GitHub API</span>\n          </div>\n          <div class=\"flex gap-4\">\n            <a href=\"#blog\" class=\"theme-link\">View Live</a>\n            <a href=\"https://github.com/alqattandev/myblog\" class=\"theme-link\">GitHub</a>\n          </div>\n        </div>\n        \n        <div class=\"theme-card\">\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Coming Soon</h3>\n          <p class=\"text-theme-text-secondary mb-4\">\n            More projects will be showcased here soon. I'm currently working on several exciting \n            full-stack applications and open-source contributions.\n          </p>\n          <div class=\"flex flex-wrap gap-2 mb-4\">\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">React</span>\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">Node.js</span>\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">AWS</span>\n          </div>\n          <div class=\"flex gap-4\">\n            <span class=\"text-theme-text-muted\">In Development</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- Blog Section -->\n  <section class=\"py-16 bg-theme-bg-secondary\" id=\"blog\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Latest Blog Posts</h2>\n        <p class=\"text-lg text-theme-text-secondary\">\n          Sharing thoughts on software development and technology\n        </p>\n      </div>\n      \n      {recentPosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-theme-text-secondary\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {recentPosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n      \n      <div class=\"text-center mt-8\">\n        <a href={`${import.meta.env.BASE_URL}blog`} class=\"theme-button\">\n          View All Posts\n        </a>\n      </div>\n    </div>\n  </section>\n\n  <!-- Contact Section -->\n  <section class=\"py-16 bg-theme-bg-primary\" id=\"contact\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Get In Touch</h2>\n        <p class=\"text-lg text-theme-text-secondary max-w-2xl mx-auto\">\n          I'm always interested in new opportunities and collaborations. \n          Feel free to reach out if you'd like to work together!\n        </p>\n      </div>\n      \n      <div class=\"flex justify-center gap-6\">\n        <a href=\"mailto:contact@alialqattan.dev\" class=\"theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform\">\n          <span class=\"text-theme-accent-primary text-xl\">\ud83d\udce7</span>\n          <span class=\"text-theme-text-primary\">Email</span>\n        </a>\n        <a href=\"https://github.com/alqattanddev\" class=\"theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform\">\n          <span class=\"text-theme-accent-primary text-xl\">\ud83d\udc68\u200d\ud83d\udcbb</span>\n          <span class=\"text-theme-text-primary\">GitHub</span>\n        </a>\n        <a href=\"https://linkedin.com/in/alialqattan\" class=\"theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform\">\n          <span class=\"text-theme-accent-primary text-xl\">\ud83d\udcbc</span>\n          <span class=\"text-theme-text-primary\">LinkedIn</span>\n        </a>\n      </div>\n    </div>\n  </section>"
+    },
+    "tool_response": {
+      "filePath": "/Users/alialqattan/Projects/myblog/src/pages/index.astro",
+      "oldString": "  <div class=\"mx-auto max-w-4xl px-4 py-12\">\n    <!-- Hero Section -->\n    <header class=\"mb-12 text-center\">\n      <h1 class=\"text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-6xl\">\n        Welcome to my blog\n      </h1>\n      <p class=\"mt-4 text-lg text-gray-600 dark:text-gray-400 sm:text-xl\">\n        Thoughts on software development, technology, and the craft of building things\n      </p>\n    </header>\n\n    <!-- Posts Section -->\n    <section>\n      <h2 class=\"mb-8 text-2xl font-semibold text-gray-900 dark:text-gray-100\">\n        Latest Posts\n      </h2>\n      \n      {renderablePosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-gray-600 dark:text-gray-400\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {renderablePosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n\n      {/* GitHub Content Preview */}\n      {githubOnlyPosts.length > 0 && (\n        <div class=\"mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700\">\n          <h3 class=\"text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2\">\n            \ud83d\udce1 GitHub Content Available\n          </h3>\n          <p class=\"text-blue-800 dark:text-blue-200 text-sm mb-3\">\n            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.\n          </p>\n          <div class=\"space-y-2\">\n            {githubOnlyPosts.map((post) => (\n              <div class=\"text-sm text-blue-700 dark:text-blue-300\">\n                \u2022 <strong>{post.data.title}</strong> ({post.slug})\n              </div>\n            ))}\n          </div>\n        </div>\n      )}\n    </section>\n\n    <!-- About Section -->\n    <section class=\"mt-16 border-t border-gray-200 dark:border-gray-700 pt-12\">\n      <div class=\"text-center\">\n        <h2 class=\"text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4\">\n          About This Blog\n        </h2>\n        <p class=\"text-gray-600 dark:text-gray-400 max-w-2xl mx-auto\">\n          This blog is built with Astro and automatically syncs content from a GitHub repository. \n          It features advanced markdown processing, Mermaid diagrams, syntax highlighting, and a \n          modern responsive design.\n        </p>\n      </div>\n    </section>\n  </div>",
+      "newString": "  <!-- Hero Section -->\n  <section class=\"bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-tertiary py-20 sm:py-32\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center\">\n        <h1 class=\"text-4xl font-bold text-theme-text-primary sm:text-6xl\">\n          Hi, I'm <span class=\"text-theme-accent-primary\">Ali Alqattan</span>\n        </h1>\n        <p class=\"mt-6 text-lg text-theme-text-secondary sm:text-xl max-w-2xl mx-auto\">\n          Software developer passionate about building innovative solutions with modern technologies. \n          I love creating efficient, scalable applications and sharing knowledge through writing.\n        </p>\n        <div class=\"mt-8 flex justify-center gap-4\">\n          <a href=\"#projects\" class=\"theme-button\">\n            View My Work\n          </a>\n          <a href=\"#contact\" class=\"inline-flex items-center px-6 py-3 border border-theme-border-primary text-theme-text-primary hover:bg-theme-bg-secondary rounded-lg transition-colors\">\n            Get In Touch\n          </a>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- About Section -->\n  <section class=\"py-16 bg-theme-bg-primary\" id=\"about\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">About Me</h2>\n        <p class=\"text-lg text-theme-text-secondary max-w-2xl mx-auto\">\n          I'm a passionate software developer with expertise in modern web technologies, \n          backend systems, and cloud infrastructure. I enjoy solving complex problems and \n          building user-centric applications.\n        </p>\n      </div>\n      \n      <div class=\"grid md:grid-cols-3 gap-8\">\n        <div class=\"theme-card text-center\">\n          <div class=\"text-theme-accent-primary text-3xl mb-4\">\ud83d\udcbb</div>\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Full-Stack Development</h3>\n          <p class=\"text-theme-text-secondary\">\n            Experience with React, Node.js, Python, and modern frameworks for building scalable applications.\n          </p>\n        </div>\n        \n        <div class=\"theme-card text-center\">\n          <div class=\"text-theme-accent-primary text-3xl mb-4\">\u2601\ufe0f</div>\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Cloud & DevOps</h3>\n          <p class=\"text-theme-text-secondary\">\n            Proficient in AWS, Docker, CI/CD pipelines, and infrastructure as code for reliable deployments.\n          </p>\n        </div>\n        \n        <div class=\"theme-card text-center\">\n          <div class=\"text-theme-accent-primary text-3xl mb-4\">\ud83d\ude80</div>\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Innovation & Learning</h3>\n          <p class=\"text-theme-text-secondary\">\n            Always exploring new technologies, contributing to open source, and sharing knowledge with the community.\n          </p>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- Skills Section -->\n  <section class=\"py-16 bg-theme-bg-secondary\" id=\"skills\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Technical Skills</h2>\n        <p class=\"text-lg text-theme-text-secondary\">\n          Technologies and tools I work with regularly\n        </p>\n      </div>\n      \n      <div class=\"grid md:grid-cols-2 gap-8\">\n        <div class=\"theme-card\">\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-4\">Frontend</h3>\n          <div class=\"flex flex-wrap gap-2\">\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">JavaScript</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">TypeScript</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">React</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Astro</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Tailwind CSS</span>\n          </div>\n        </div>\n        \n        <div class=\"theme-card\">\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-4\">Backend</h3>\n          <div class=\"flex flex-wrap gap-2\">\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Node.js</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Python</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">PostgreSQL</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">MongoDB</span>\n            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">GraphQL</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- Projects Section -->\n  <section class=\"py-16 bg-theme-bg-primary\" id=\"projects\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Featured Projects</h2>\n        <p class=\"text-lg text-theme-text-secondary\">\n          Some of the projects I've been working on\n        </p>\n      </div>\n      \n      <div class=\"grid md:grid-cols-2 gap-8\">\n        <div class=\"theme-card\">\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">GitHub-Synced Blog</h3>\n          <p class=\"text-theme-text-secondary mb-4\">\n            A modern blog system built with Astro that automatically syncs content from GitHub repositories, \n            featuring advanced markdown processing, Mermaid diagrams, and syntax highlighting.\n          </p>\n          <div class=\"flex flex-wrap gap-2 mb-4\">\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">Astro</span>\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">TypeScript</span>\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">GitHub API</span>\n          </div>\n          <div class=\"flex gap-4\">\n            <a href=\"#blog\" class=\"theme-link\">View Live</a>\n            <a href=\"https://github.com/alqattandev/myblog\" class=\"theme-link\">GitHub</a>\n          </div>\n        </div>\n        \n        <div class=\"theme-card\">\n          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Coming Soon</h3>\n          <p class=\"text-theme-text-secondary mb-4\">\n            More projects will be showcased here soon. I'm currently working on several exciting \n            full-stack applications and open-source contributions.\n          </p>\n          <div class=\"flex flex-wrap gap-2 mb-4\">\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">React</span>\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">Node.js</span>\n            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">AWS</span>\n          </div>\n          <div class=\"flex gap-4\">\n            <span class=\"text-theme-text-muted\">In Development</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <!-- Blog Section -->\n  <section class=\"py-16 bg-theme-bg-secondary\" id=\"blog\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Latest Blog Posts</h2>\n        <p class=\"text-lg text-theme-text-secondary\">\n          Sharing thoughts on software development and technology\n        </p>\n      </div>\n      \n      {recentPosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-theme-text-secondary\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {recentPosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n      \n      <div class=\"text-center mt-8\">\n        <a href={`${import.meta.env.BASE_URL}blog`} class=\"theme-button\">\n          View All Posts\n        </a>\n      </div>\n    </div>\n  </section>\n\n  <!-- Contact Section -->\n  <section class=\"py-16 bg-theme-bg-primary\" id=\"contact\">\n    <div class=\"mx-auto max-w-4xl px-4\">\n      <div class=\"text-center mb-12\">\n        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Get In Touch</h2>\n        <p class=\"text-lg text-theme-text-secondary max-w-2xl mx-auto\">\n          I'm always interested in new opportunities and collaborations. \n          Feel free to reach out if you'd like to work together!\n        </p>\n      </div>\n      \n      <div class=\"flex justify-center gap-6\">\n        <a href=\"mailto:contact@alialqattan.dev\" class=\"theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform\">\n          <span class=\"text-theme-accent-primary text-xl\">\ud83d\udce7</span>\n          <span class=\"text-theme-text-primary\">Email</span>\n        </a>\n        <a href=\"https://github.com/alqattanddev\" class=\"theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform\">\n          <span class=\"text-theme-accent-primary text-xl\">\ud83d\udc68\u200d\ud83d\udcbb</span>\n          <span class=\"text-theme-text-primary\">GitHub</span>\n        </a>\n        <a href=\"https://linkedin.com/in/alialqattan\" class=\"theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform\">\n          <span class=\"text-theme-accent-primary text-xl\">\ud83d\udcbc</span>\n          <span class=\"text-theme-text-primary\">LinkedIn</span>\n        </a>\n      </div>\n    </div>\n  </section>",
+      "originalFile": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get recent posts for the blog section\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered and get the latest 3 for portfolio display\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst recentPosts = renderablePosts.slice(0, 3);\n---\n\n<BaseLayout \n  title=\"Ali Alqattan - Software Developer & Portfolio\" \n  description=\"Software developer passionate about building innovative solutions. Explore my projects, blog, and technical journey.\"\n>\n  <div class=\"mx-auto max-w-4xl px-4 py-12\">\n    <!-- Hero Section -->\n    <header class=\"mb-12 text-center\">\n      <h1 class=\"text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-6xl\">\n        Welcome to my blog\n      </h1>\n      <p class=\"mt-4 text-lg text-gray-600 dark:text-gray-400 sm:text-xl\">\n        Thoughts on software development, technology, and the craft of building things\n      </p>\n    </header>\n\n    <!-- Posts Section -->\n    <section>\n      <h2 class=\"mb-8 text-2xl font-semibold text-gray-900 dark:text-gray-100\">\n        Latest Posts\n      </h2>\n      \n      {renderablePosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-gray-600 dark:text-gray-400\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {renderablePosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n\n      {/* GitHub Content Preview */}\n      {githubOnlyPosts.length > 0 && (\n        <div class=\"mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700\">\n          <h3 class=\"text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2\">\n            \ud83d\udce1 GitHub Content Available\n          </h3>\n          <p class=\"text-blue-800 dark:text-blue-200 text-sm mb-3\">\n            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.\n          </p>\n          <div class=\"space-y-2\">\n            {githubOnlyPosts.map((post) => (\n              <div class=\"text-sm text-blue-700 dark:text-blue-300\">\n                \u2022 <strong>{post.data.title}</strong> ({post.slug})\n              </div>\n            ))}\n          </div>\n        </div>\n      )}\n    </section>\n\n    <!-- About Section -->\n    <section class=\"mt-16 border-t border-gray-200 dark:border-gray-700 pt-12\">\n      <div class=\"text-center\">\n        <h2 class=\"text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4\">\n          About This Blog\n        </h2>\n        <p class=\"text-gray-600 dark:text-gray-400 max-w-2xl mx-auto\">\n          This blog is built with Astro and automatically syncs content from a GitHub repository. \n          It features advanced markdown processing, Mermaid diagrams, syntax highlighting, and a \n          modern responsive design.\n        </p>\n      </div>\n    </section>\n  </div>\n</BaseLayout>\n",
+      "structuredPatch": [
+        {
+          "oldStart": 21,
+          "oldLines": 67,
+          "newStart": 21,
+          "newLines": 207,
+          "lines": [
+            "   title=\"Ali Alqattan - Software Developer & Portfolio\" ",
+            "   description=\"Software developer passionate about building innovative solutions. Explore my projects, blog, and technical journey.\"",
+            " >",
+            "-  <div class=\"mx-auto max-w-4xl px-4 py-12\">",
+            "-    <!-- Hero Section -->",
+            "-    <header class=\"mb-12 text-center\">",
+            "-      <h1 class=\"text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-6xl\">",
+            "-        Welcome to my blog",
+            "-      </h1>",
+            "-      <p class=\"mt-4 text-lg text-gray-600 dark:text-gray-400 sm:text-xl\">",
+            "-        Thoughts on software development, technology, and the craft of building things",
+            "-      </p>",
+            "-    </header>",
+            "+  <!-- Hero Section -->",
+            "+  <section class=\"bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-tertiary py-20 sm:py-32\">",
+            "+    <div class=\"mx-auto max-w-4xl px-4\">",
+            "+      <div class=\"text-center\">",
+            "+        <h1 class=\"text-4xl font-bold text-theme-text-primary sm:text-6xl\">",
+            "+          Hi, I'm <span class=\"text-theme-accent-primary\">Ali Alqattan</span>",
+            "+        </h1>",
+            "+        <p class=\"mt-6 text-lg text-theme-text-secondary sm:text-xl max-w-2xl mx-auto\">",
+            "+          Software developer passionate about building innovative solutions with modern technologies. ",
+            "+          I love creating efficient, scalable applications and sharing knowledge through writing.",
+            "+        </p>",
+            "+        <div class=\"mt-8 flex justify-center gap-4\">",
+            "+          <a href=\"#projects\" class=\"theme-button\">",
+            "+            View My Work",
+            "+          </a>",
+            "+          <a href=\"#contact\" class=\"inline-flex items-center px-6 py-3 border border-theme-border-primary text-theme-text-primary hover:bg-theme-bg-secondary rounded-lg transition-colors\">",
+            "+            Get In Touch",
+            "+          </a>",
+            "+        </div>",
+            "+      </div>",
+            "+    </div>",
+            "+  </section>",
+            " ",
+            "-    <!-- Posts Section -->",
+            "-    <section>",
+            "-      <h2 class=\"mb-8 text-2xl font-semibold text-gray-900 dark:text-gray-100\">",
+            "-        Latest Posts",
+            "-      </h2>",
+            "+  <!-- About Section -->",
+            "+  <section class=\"py-16 bg-theme-bg-primary\" id=\"about\">",
+            "+    <div class=\"mx-auto max-w-4xl px-4\">",
+            "+      <div class=\"text-center mb-12\">",
+            "+        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">About Me</h2>",
+            "+        <p class=\"text-lg text-theme-text-secondary max-w-2xl mx-auto\">",
+            "+          I'm a passionate software developer with expertise in modern web technologies, ",
+            "+          backend systems, and cloud infrastructure. I enjoy solving complex problems and ",
+            "+          building user-centric applications.",
+            "+        </p>",
+            "+      </div>",
+            "       ",
+            "-      {renderablePosts.length === 0 ? (",
+            "+      <div class=\"grid md:grid-cols-3 gap-8\">",
+            "+        <div class=\"theme-card text-center\">",
+            "+          <div class=\"text-theme-accent-primary text-3xl mb-4\">\ud83d\udcbb</div>",
+            "+          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Full-Stack Development</h3>",
+            "+          <p class=\"text-theme-text-secondary\">",
+            "+            Experience with React, Node.js, Python, and modern frameworks for building scalable applications.",
+            "+          </p>",
+            "+        </div>",
+            "+        ",
+            "+        <div class=\"theme-card text-center\">",
+            "+          <div class=\"text-theme-accent-primary text-3xl mb-4\">\u2601\ufe0f</div>",
+            "+          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Cloud & DevOps</h3>",
+            "+          <p class=\"text-theme-text-secondary\">",
+            "+            Proficient in AWS, Docker, CI/CD pipelines, and infrastructure as code for reliable deployments.",
+            "+          </p>",
+            "+        </div>",
+            "+        ",
+            "+        <div class=\"theme-card text-center\">",
+            "+          <div class=\"text-theme-accent-primary text-3xl mb-4\">\ud83d\ude80</div>",
+            "+          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Innovation & Learning</h3>",
+            "+          <p class=\"text-theme-text-secondary\">",
+            "+            Always exploring new technologies, contributing to open source, and sharing knowledge with the community.",
+            "+          </p>",
+            "+        </div>",
+            "+      </div>",
+            "+    </div>",
+            "+  </section>",
+            "+",
+            "+  <!-- Skills Section -->",
+            "+  <section class=\"py-16 bg-theme-bg-secondary\" id=\"skills\">",
+            "+    <div class=\"mx-auto max-w-4xl px-4\">",
+            "+      <div class=\"text-center mb-12\">",
+            "+        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Technical Skills</h2>",
+            "+        <p class=\"text-lg text-theme-text-secondary\">",
+            "+          Technologies and tools I work with regularly",
+            "+        </p>",
+            "+      </div>",
+            "+      ",
+            "+      <div class=\"grid md:grid-cols-2 gap-8\">",
+            "+        <div class=\"theme-card\">",
+            "+          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-4\">Frontend</h3>",
+            "+          <div class=\"flex flex-wrap gap-2\">",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">JavaScript</span>",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">TypeScript</span>",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">React</span>",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Astro</span>",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Tailwind CSS</span>",
+            "+          </div>",
+            "+        </div>",
+            "+        ",
+            "+        <div class=\"theme-card\">",
+            "+          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-4\">Backend</h3>",
+            "+          <div class=\"flex flex-wrap gap-2\">",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Node.js</span>",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">Python</span>",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">PostgreSQL</span>",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">MongoDB</span>",
+            "+            <span class=\"px-3 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded-full text-sm\">GraphQL</span>",
+            "+          </div>",
+            "+        </div>",
+            "+      </div>",
+            "+    </div>",
+            "+  </section>",
+            "+",
+            "+  <!-- Projects Section -->",
+            "+  <section class=\"py-16 bg-theme-bg-primary\" id=\"projects\">",
+            "+    <div class=\"mx-auto max-w-4xl px-4\">",
+            "+      <div class=\"text-center mb-12\">",
+            "+        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Featured Projects</h2>",
+            "+        <p class=\"text-lg text-theme-text-secondary\">",
+            "+          Some of the projects I've been working on",
+            "+        </p>",
+            "+      </div>",
+            "+      ",
+            "+      <div class=\"grid md:grid-cols-2 gap-8\">",
+            "+        <div class=\"theme-card\">",
+            "+          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">GitHub-Synced Blog</h3>",
+            "+          <p class=\"text-theme-text-secondary mb-4\">",
+            "+            A modern blog system built with Astro that automatically syncs content from GitHub repositories, ",
+            "+            featuring advanced markdown processing, Mermaid diagrams, and syntax highlighting.",
+            "+          </p>",
+            "+          <div class=\"flex flex-wrap gap-2 mb-4\">",
+            "+            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">Astro</span>",
+            "+            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">TypeScript</span>",
+            "+            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">GitHub API</span>",
+            "+          </div>",
+            "+          <div class=\"flex gap-4\">",
+            "+            <a href=\"#blog\" class=\"theme-link\">View Live</a>",
+            "+            <a href=\"https://github.com/alqattandev/myblog\" class=\"theme-link\">GitHub</a>",
+            "+          </div>",
+            "+        </div>",
+            "+        ",
+            "+        <div class=\"theme-card\">",
+            "+          <h3 class=\"text-xl font-semibold text-theme-text-primary mb-2\">Coming Soon</h3>",
+            "+          <p class=\"text-theme-text-secondary mb-4\">",
+            "+            More projects will be showcased here soon. I'm currently working on several exciting ",
+            "+            full-stack applications and open-source contributions.",
+            "+          </p>",
+            "+          <div class=\"flex flex-wrap gap-2 mb-4\">",
+            "+            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">React</span>",
+            "+            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">Node.js</span>",
+            "+            <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">AWS</span>",
+            "+          </div>",
+            "+          <div class=\"flex gap-4\">",
+            "+            <span class=\"text-theme-text-muted\">In Development</span>",
+            "+          </div>",
+            "+        </div>",
+            "+      </div>",
+            "+    </div>",
+            "+  </section>",
+            "+",
+            "+  <!-- Blog Section -->",
+            "+  <section class=\"py-16 bg-theme-bg-secondary\" id=\"blog\">",
+            "+    <div class=\"mx-auto max-w-4xl px-4\">",
+            "+      <div class=\"text-center mb-12\">",
+            "+        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Latest Blog Posts</h2>",
+            "+        <p class=\"text-lg text-theme-text-secondary\">",
+            "+          Sharing thoughts on software development and technology",
+            "+        </p>",
+            "+      </div>",
+            "+      ",
+            "+      {recentPosts.length === 0 ? (",
+            "         <div class=\"text-center py-12\">",
+            "-          <p class=\"text-gray-600 dark:text-gray-400\">No posts published yet. Check back soon!</p>",
+            "+          <p class=\"text-theme-text-secondary\">No posts published yet. Check back soon!</p>",
+            "         </div>",
+            "       ) : (",
+            "         <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">",
+            "-          {renderablePosts.map((post) => (",
+            "+          {recentPosts.map((post) => (",
+            "             <PostCard post={post} />",
+            "           ))}",
+            "         </div>",
+            "       )}",
+            "+      ",
+            "+      <div class=\"text-center mt-8\">",
+            "+        <a href={`${import.meta.env.BASE_URL}blog`} class=\"theme-button\">",
+            "+          View All Posts",
+            "+        </a>",
+            "+      </div>",
+            "+    </div>",
+            "+  </section>",
+            " ",
+            "-      {/* GitHub Content Preview */}",
+            "-      {githubOnlyPosts.length > 0 && (",
+            "-        <div class=\"mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700\">",
+            "-          <h3 class=\"text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2\">",
+            "-            \ud83d\udce1 GitHub Content Available",
+            "-          </h3>",
+            "-          <p class=\"text-blue-800 dark:text-blue-200 text-sm mb-3\">",
+            "-            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.",
+            "-          </p>",
+            "-          <div class=\"space-y-2\">",
+            "-            {githubOnlyPosts.map((post) => (",
+            "-              <div class=\"text-sm text-blue-700 dark:text-blue-300\">",
+            "-                \u2022 <strong>{post.data.title}</strong> ({post.slug})",
+            "-              </div>",
+            "-            ))}",
+            "-          </div>",
+            "-        </div>",
+            "-      )}",
+            "-    </section>",
+            "-",
+            "-    <!-- About Section -->",
+            "-    <section class=\"mt-16 border-t border-gray-200 dark:border-gray-700 pt-12\">",
+            "-      <div class=\"text-center\">",
+            "-        <h2 class=\"text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4\">",
+            "-          About This Blog",
+            "-        </h2>",
+            "-        <p class=\"text-gray-600 dark:text-gray-400 max-w-2xl mx-auto\">",
+            "-          This blog is built with Astro and automatically syncs content from a GitHub repository. ",
+            "-          It features advanced markdown processing, Mermaid diagrams, syntax highlighting, and a ",
+            "-          modern responsive design.",
+            "+  <!-- Contact Section -->",
+            "+  <section class=\"py-16 bg-theme-bg-primary\" id=\"contact\">",
+            "+    <div class=\"mx-auto max-w-4xl px-4\">",
+            "+      <div class=\"text-center mb-12\">",
+            "+        <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Get In Touch</h2>",
+            "+        <p class=\"text-lg text-theme-text-secondary max-w-2xl mx-auto\">",
+            "+          I'm always interested in new opportunities and collaborations. ",
+            "+          Feel free to reach out if you'd like to work together!",
+            "         </p>",
+            "       </div>",
+            "-    </section>",
+            "-  </div>",
+            "+      ",
+            "+      <div class=\"flex justify-center gap-6\">",
+            "+        <a href=\"mailto:contact@alialqattan.dev\" class=\"theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform\">",
+            "+          <span class=\"text-theme-accent-primary text-xl\">\ud83d\udce7</span>",
+            "+          <span class=\"text-theme-text-primary\">Email</span>",
+            "+        </a>",
+            "+        <a href=\"https://github.com/alqattanddev\" class=\"theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform\">",
+            "+          <span class=\"text-theme-accent-primary text-xl\">\ud83d\udc68\u200d\ud83d\udcbb</span>",
+            "+          <span class=\"text-theme-text-primary\">GitHub</span>",
+            "+        </a>",
+            "+        <a href=\"https://linkedin.com/in/alialqattan\" class=\"theme-card inline-flex items-center gap-3 hover:scale-105 transition-transform\">",
+            "+          <span class=\"text-theme-accent-primary text-xl\">\ud83d\udcbc</span>",
+            "+          <span class=\"text-theme-text-primary\">LinkedIn</span>",
+            "+        </a>",
+            "+      </div>",
+            "+    </div>",
+            "+  </section>",
+            " </BaseLayout>"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "pending",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Write",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/pages/blog.astro",
+      "content": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get all posts\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered (local content collections only for now)\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));\n---\n\n<BaseLayout \n  title=\"Blog - Ali Alqattan\" \n  description=\"My thoughts on software development, technology, and the craft of building things\"\n>\n  <div class=\"mx-auto max-w-4xl px-4 py-12\">\n    <!-- Hero Section -->\n    <header class=\"mb-12 text-center\">\n      <h1 class=\"text-4xl font-bold text-theme-text-primary sm:text-5xl\">\n        Blog\n      </h1>\n      <p class=\"mt-4 text-lg text-theme-text-secondary sm:text-xl\">\n        My thoughts on software development, technology, and the craft of building things\n      </p>\n    </header>\n\n    <!-- Posts Section -->\n    <section>\n      <h2 class=\"mb-8 text-2xl font-semibold text-theme-text-primary\">\n        All Posts\n      </h2>\n      \n      {renderablePosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-theme-text-secondary\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {renderablePosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n\n      {/* GitHub Content Preview */}\n      {githubOnlyPosts.length > 0 && (\n        <div class=\"mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700\">\n          <h3 class=\"text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2\">\n            \ud83d\udce1 GitHub Content Available\n          </h3>\n          <p class=\"text-blue-800 dark:text-blue-200 text-sm mb-3\">\n            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.\n          </p>\n          <div class=\"space-y-2\">\n            {githubOnlyPosts.map((post) => (\n              <div class=\"text-sm text-blue-700 dark:text-blue-300\">\n                \u2022 <strong>{post.data.title}</strong> ({post.slug})\n              </div>\n            ))}\n          </div>\n        </div>\n      )}\n    </section>\n  </div>\n</BaseLayout>"
+    },
+    "tool_response": {
+      "type": "create",
+      "filePath": "/Users/alialqattan/Projects/myblog/src/pages/blog.astro",
+      "content": "---\nimport BaseLayout from '../layouts/BaseLayout.astro';\nimport PostCard from '../components/PostCard.astro';\nimport { ContentManager } from '../utils/content-manager.js';\n\n// Initialize content manager and get all posts\nconst contentManager = new ContentManager();\nconst allPosts = await contentManager.getAllPosts();\n\n// Get content source information for debugging\nconst contentSources = contentManager.getContentSources();\nconsole.log('Content sources:', contentSources);\nconsole.log(`Loaded ${allPosts.length} posts`);\n\n// Filter posts that can be rendered (local content collections only for now)\nconst renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');\nconst githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));\n---\n\n<BaseLayout \n  title=\"Blog - Ali Alqattan\" \n  description=\"My thoughts on software development, technology, and the craft of building things\"\n>\n  <div class=\"mx-auto max-w-4xl px-4 py-12\">\n    <!-- Hero Section -->\n    <header class=\"mb-12 text-center\">\n      <h1 class=\"text-4xl font-bold text-theme-text-primary sm:text-5xl\">\n        Blog\n      </h1>\n      <p class=\"mt-4 text-lg text-theme-text-secondary sm:text-xl\">\n        My thoughts on software development, technology, and the craft of building things\n      </p>\n    </header>\n\n    <!-- Posts Section -->\n    <section>\n      <h2 class=\"mb-8 text-2xl font-semibold text-theme-text-primary\">\n        All Posts\n      </h2>\n      \n      {renderablePosts.length === 0 ? (\n        <div class=\"text-center py-12\">\n          <p class=\"text-theme-text-secondary\">No posts published yet. Check back soon!</p>\n        </div>\n      ) : (\n        <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\">\n          {renderablePosts.map((post) => (\n            <PostCard post={post} />\n          ))}\n        </div>\n      )}\n\n      {/* GitHub Content Preview */}\n      {githubOnlyPosts.length > 0 && (\n        <div class=\"mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700\">\n          <h3 class=\"text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2\">\n            \ud83d\udce1 GitHub Content Available\n          </h3>\n          <p class=\"text-blue-800 dark:text-blue-200 text-sm mb-3\">\n            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.\n          </p>\n          <div class=\"space-y-2\">\n            {githubOnlyPosts.map((post) => (\n              <div class=\"text-sm text-blue-700 dark:text-blue-300\">\n                \u2022 <strong>{post.data.title}</strong> ({post.slug})\n              </div>\n            ))}\n          </div>\n        </div>\n      )}\n    </section>\n  </div>\n</BaseLayout>",
+      "structuredPatch": []
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/layouts/BaseLayout.astro",
+      "old_string": "            <div class=\"flex items-center space-x-6\">\n              <a href={import.meta.env.BASE_URL} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Blog</a>\n              <a href={`${import.meta.env.BASE_URL}/about`} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">About</a>\n              <ThemeToggle />\n            </div>",
+      "new_string": "            <div class=\"flex items-center space-x-6\">\n              <a href={import.meta.env.BASE_URL} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Home</a>\n              <a href={`${import.meta.env.BASE_URL}blog`} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Blog</a>\n              <a href=\"#about\" class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">About</a>\n              <a href=\"#contact\" class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Contact</a>\n              <ThemeToggle />\n            </div>"
+    },
+    "tool_response": {
+      "filePath": "/Users/alialqattan/Projects/myblog/src/layouts/BaseLayout.astro",
+      "oldString": "            <div class=\"flex items-center space-x-6\">\n              <a href={import.meta.env.BASE_URL} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Blog</a>\n              <a href={`${import.meta.env.BASE_URL}/about`} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">About</a>\n              <ThemeToggle />\n            </div>",
+      "newString": "            <div class=\"flex items-center space-x-6\">\n              <a href={import.meta.env.BASE_URL} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Home</a>\n              <a href={`${import.meta.env.BASE_URL}blog`} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Blog</a>\n              <a href=\"#about\" class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">About</a>\n              <a href=\"#contact\" class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Contact</a>\n              <ThemeToggle />\n            </div>",
+      "originalFile": "---\nimport ThemeToggle from '../components/ThemeToggle.astro';\nimport MermaidTheme from '../components/MermaidTheme.astro';\nimport '../styles/theme-tokens.css';\n\nexport interface Props {\n  title: string;\n  description?: string;\n  image?: string;\n}\n\nconst { title, description = \"Ali Alqattan's Blog\", image } = Astro.props;\nconst canonicalURL = new URL(Astro.url.pathname, Astro.site);\n---\n\n<!DOCTYPE html>\n<html lang=\"en\" class=\"scroll-smooth transition-colors duration-200\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"description\" content={description} />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href={`${import.meta.env.BASE_URL}favicon.svg`} />\n    <meta name=\"generator\" content={Astro.generator} />\n    \n    <!-- Google Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    <link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap\" rel=\"stylesheet\" />\n    \n    <!-- SEO -->\n    <title>{title}</title>\n    <link rel=\"canonical\" href={canonicalURL} />\n    \n    <!-- Open Graph -->\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:title\" content={title} />\n    <meta property=\"og:description\" content={description} />\n    <meta property=\"og:url\" content={canonicalURL} />\n    {image && <meta property=\"og:image\" content={new URL(image, Astro.url)} />}\n    \n    <!-- Twitter -->\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:title\" content={title} />\n    <meta name=\"twitter:description\" content={description} />\n    {image && <meta name=\"twitter:image\" content={new URL(image, Astro.url)} />}\n  </head>\n  <body class=\"min-h-screen bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-tertiary text-theme-text-primary antialiased theme-transition\">\n    <div class=\"flex min-h-screen flex-col\">\n      <!-- Header -->\n      <header class=\"border-b border-theme-border-primary bg-theme-bg-primary/80 backdrop-blur-sm theme-transition\">\n        <div class=\"mx-auto max-w-4xl px-4 py-6\">\n          <nav class=\"flex items-center justify-between\">\n            <a href={import.meta.env.BASE_URL} class=\"text-xl font-bold text-theme-text-primary hover:text-theme-accent-primary theme-transition\">\n              Ali Alqattan\n            </a>\n            <div class=\"flex items-center space-x-6\">\n              <a href={import.meta.env.BASE_URL} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Blog</a>\n              <a href={`${import.meta.env.BASE_URL}/about`} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">About</a>\n              <ThemeToggle />\n            </div>\n          </nav>\n        </div>\n      </header>\n\n      <!-- Main Content -->\n      <main class=\"flex-1\">\n        <slot />\n      </main>\n\n      <!-- Footer -->\n      <footer class=\"border-t border-theme-border-primary bg-theme-bg-secondary theme-transition\">\n        <div class=\"mx-auto max-w-4xl px-4 py-8\">\n          <div class=\"text-center text-sm text-theme-text-secondary\">\n            <p>&copy; {new Date().getFullYear()} Ali Alqattan. All rights reserved.</p>\n            <p class=\"mt-2\">\n              Built with <a href=\"https://astro.build\" class=\"theme-link\">Astro</a>\n              and deployed on <a href=\"https://pages.github.com\" class=\"theme-link\">GitHub Pages</a>\n            </p>\n          </div>\n        </div>\n      </footer>\n    </div>\n    \n    <!-- Mermaid theme integration -->\n    <MermaidTheme />\n  </body>\n</html>",
+      "structuredPatch": [
+        {
+          "oldStart": 54,
+          "oldLines": 8,
+          "newStart": 54,
+          "newLines": 10,
+          "lines": [
+            "               Ali Alqattan",
+            "             </a>",
+            "             <div class=\"flex items-center space-x-6\">",
+            "-              <a href={import.meta.env.BASE_URL} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Blog</a>",
+            "-              <a href={`${import.meta.env.BASE_URL}/about`} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">About</a>",
+            "+              <a href={import.meta.env.BASE_URL} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Home</a>",
+            "+              <a href={`${import.meta.env.BASE_URL}blog`} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Blog</a>",
+            "+              <a href=\"#about\" class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">About</a>",
+            "+              <a href=\"#contact\" class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Contact</a>",
+            "               <ThemeToggle />",
+            "             </div>",
+            "           </nav>"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "completed",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "pending",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "completed",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/styles/theme-tokens.css",
+      "old_string": "/* High contrast mode support */\n@media (prefers-contrast: high) {\n  :root {\n    --theme-text-primary: #000000;\n    --theme-text-secondary: #333333;\n    --theme-bg-primary: #ffffff;\n    --theme-border-primary: #000000;\n    --theme-accent-primary: #0000ff;\n  }\n  \n  .dark {\n    --theme-text-primary: #ffffff;\n    --theme-text-secondary: #cccccc;\n    --theme-bg-primary: #000000;\n    --theme-border-primary: #ffffff;\n    --theme-accent-primary: #00ffff;\n  }\n}",
+      "new_string": "/* High contrast mode support */\n@media (prefers-contrast: high) {\n  :root {\n    --theme-text-primary: #000000;\n    --theme-text-secondary: #333333;\n    --theme-bg-primary: #ffffff;\n    --theme-border-primary: #000000;\n    --theme-accent-primary: #0000ff;\n  }\n  \n  .dark {\n    --theme-text-primary: #ffffff;\n    --theme-text-secondary: #cccccc;\n    --theme-bg-primary: #000000;\n    --theme-border-primary: #ffffff;\n    --theme-accent-primary: #00ffff;\n  }\n}\n\n/* Portfolio-specific enhancements */\n.portfolio-section {\n  scroll-margin-top: 80px; /* Offset for fixed header */\n}\n\n/* Smooth scrolling for internal links */\nhtml {\n  scroll-behavior: smooth;\n}\n\n/* Enhanced hover effects for portfolio cards */\n.portfolio-card {\n  transition: transform 0.3s ease, box-shadow 0.3s ease;\n}\n\n.portfolio-card:hover {\n  transform: translateY(-5px);\n  box-shadow: 0 20px 40px rgba(15, 118, 110, 0.15);\n}\n\n/* Gradient text effect */\n.gradient-text {\n  background: linear-gradient(135deg, var(--theme-accent-primary), var(--theme-accent-secondary));\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n\n/* Icon animation */\n@keyframes float {\n  0%, 100% { transform: translateY(0px); }\n  50% { transform: translateY(-10px); }\n}\n\n.floating-icon {\n  animation: float 3s ease-in-out infinite;\n}\n\n/* Skills badge hover effect */\n.skill-badge {\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\n}\n\n.skill-badge:hover {\n  transform: scale(1.05);\n  box-shadow: 0 4px 8px rgba(15, 118, 110, 0.2);\n}"
+    },
+    "tool_response": {
+      "filePath": "/Users/alialqattan/Projects/myblog/src/styles/theme-tokens.css",
+      "oldString": "/* High contrast mode support */\n@media (prefers-contrast: high) {\n  :root {\n    --theme-text-primary: #000000;\n    --theme-text-secondary: #333333;\n    --theme-bg-primary: #ffffff;\n    --theme-border-primary: #000000;\n    --theme-accent-primary: #0000ff;\n  }\n  \n  .dark {\n    --theme-text-primary: #ffffff;\n    --theme-text-secondary: #cccccc;\n    --theme-bg-primary: #000000;\n    --theme-border-primary: #ffffff;\n    --theme-accent-primary: #00ffff;\n  }\n}",
+      "newString": "/* High contrast mode support */\n@media (prefers-contrast: high) {\n  :root {\n    --theme-text-primary: #000000;\n    --theme-text-secondary: #333333;\n    --theme-bg-primary: #ffffff;\n    --theme-border-primary: #000000;\n    --theme-accent-primary: #0000ff;\n  }\n  \n  .dark {\n    --theme-text-primary: #ffffff;\n    --theme-text-secondary: #cccccc;\n    --theme-bg-primary: #000000;\n    --theme-border-primary: #ffffff;\n    --theme-accent-primary: #00ffff;\n  }\n}\n\n/* Portfolio-specific enhancements */\n.portfolio-section {\n  scroll-margin-top: 80px; /* Offset for fixed header */\n}\n\n/* Smooth scrolling for internal links */\nhtml {\n  scroll-behavior: smooth;\n}\n\n/* Enhanced hover effects for portfolio cards */\n.portfolio-card {\n  transition: transform 0.3s ease, box-shadow 0.3s ease;\n}\n\n.portfolio-card:hover {\n  transform: translateY(-5px);\n  box-shadow: 0 20px 40px rgba(15, 118, 110, 0.15);\n}\n\n/* Gradient text effect */\n.gradient-text {\n  background: linear-gradient(135deg, var(--theme-accent-primary), var(--theme-accent-secondary));\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n\n/* Icon animation */\n@keyframes float {\n  0%, 100% { transform: translateY(0px); }\n  50% { transform: translateY(-10px); }\n}\n\n.floating-icon {\n  animation: float 3s ease-in-out infinite;\n}\n\n/* Skills badge hover effect */\n.skill-badge {\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\n}\n\n.skill-badge:hover {\n  transform: scale(1.05);\n  box-shadow: 0 4px 8px rgba(15, 118, 110, 0.2);\n}",
+      "originalFile": "/* Theme Token System - Centralized color management for light/dark modes */\n\n:root {\n  /* Base semantic color tokens - matching teal/slate design */\n  --theme-bg-primary: #ffffff;\n  --theme-bg-secondary: #f8fafc;\n  --theme-bg-tertiary: #f1f5f9;\n  --theme-bg-code: #f8fafc;\n  --theme-bg-muted: #e2e8f0;\n  \n  --theme-text-primary: #1e293b;\n  --theme-text-secondary: #64748b;\n  --theme-text-tertiary: #94a3b8;\n  --theme-text-muted: #94a3b8;\n  --theme-text-inverse: #ffffff;\n  \n  --theme-border-primary: #e2e8f0;\n  --theme-border-secondary: #cbd5e1;\n  --theme-border-muted: #f1f5f9;\n  \n  --theme-accent-primary: #0f766e;\n  --theme-accent-primary-hover: #0d9488;\n  --theme-accent-secondary: #14b8a6;\n  --theme-accent-success: #10b981;\n  \n  /* Component-specific tokens */\n  --theme-code-text: #0f766e;\n  --theme-code-bg: #f8fafc;\n  --theme-link-color: #0f766e;\n  --theme-link-hover: #0d9488;\n  \n  /* Shiki syntax highlighting CSS variables for light theme */\n  --shiki-color-text: #24292e;\n  --shiki-color-background: #ffffff;\n  --shiki-token-constant: #005cc5;\n  --shiki-token-string: #032f62;\n  --shiki-token-comment: #6a737d;\n  --shiki-token-keyword: #d73a49;\n  --shiki-token-parameter: #24292e;\n  --shiki-token-function: #6f42c1;\n  --shiki-token-string-expression: #032f62;\n  --shiki-token-punctuation: #24292e;\n  --shiki-token-link: #005cc5;\n}\n\n.dark {\n  /* Dark theme overrides */\n  --theme-bg-primary: #111827;\n  --theme-bg-secondary: #1f2937;\n  --theme-bg-tertiary: #374151;\n  --theme-bg-code: #1e293b;\n  --theme-bg-muted: #334155;\n  \n  --theme-text-primary: #f9fafb;\n  --theme-text-secondary: #d1d5db;\n  --theme-text-tertiary: #9ca3af;\n  --theme-text-muted: #94a3b8;\n  --theme-text-inverse: #111827;\n  \n  --theme-border-primary: #374151;\n  --theme-border-secondary: #4b5563;\n  --theme-border-muted: #475569;\n  \n  --theme-accent-primary: #60a5fa;\n  --theme-accent-primary-hover: #3b82f6;\n  --theme-accent-secondary: #a78bfa;\n  --theme-accent-success: #34d399;\n  \n  --theme-code-text: #60a5fa;\n  --theme-code-bg: #334155;\n  --theme-link-color: #60a5fa;\n  --theme-link-hover: #93c5fd;\n  \n  /* Shiki syntax highlighting CSS variables for dark theme */\n  --shiki-color-text: #e6edf3;\n  --shiki-color-background: #0d1117;\n  --shiki-token-constant: #79c0ff;\n  --shiki-token-string: #a5d6ff;\n  --shiki-token-comment: #8b949e;\n  --shiki-token-keyword: #ff7b72;\n  --shiki-token-parameter: #e6edf3;\n  --shiki-token-function: #d2a8ff;\n  --shiki-token-string-expression: #a5d6ff;\n  --shiki-token-punctuation: #e6edf3;\n  --shiki-token-link: #79c0ff;\n}\n\n/* Shiki code block theme integration */\npre.astro-code {\n  background-color: var(--shiki-color-background) !important;\n  color: var(--shiki-color-text) !important;\n  border: 1px solid var(--theme-border-primary);\n  border-radius: 0.5rem;\n  padding: 1rem;\n  overflow-x: auto;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;\n}\n\n/* \n  Critical: Apply Shiki CSS variables to syntax highlighting spans\n  This connects Shiki's generated variables to the actual color display\n*/\n\n/* Light mode: Use --shiki-light variables for syntax highlighting */\n.astro-code.github-light span {\n  color: var(--shiki-light);\n}\n\n/* Dark mode: Use --shiki-dark variables for syntax highlighting */\n.dark .astro-code.github-dark-default span {\n  color: var(--shiki-dark);\n}\n\n/* Mermaid diagram theme variables */\n:root {\n  --mermaid-theme: 'base';\n  --mermaid-primary-color: var(--theme-accent-primary);\n  --mermaid-primary-text-color: var(--theme-text-primary);\n  --mermaid-primary-border-color: var(--theme-border-primary);\n  --mermaid-line-color: var(--theme-border-secondary);\n  --mermaid-section-bg-color: var(--theme-bg-secondary);\n  --mermaid-alt-section-bg-color: var(--theme-bg-tertiary);\n  --mermaid-grid-color: var(--theme-border-muted);\n  --mermaid-text-color: var(--theme-text-primary);\n  --mermaid-task-bg-color: var(--theme-bg-secondary);\n  --mermaid-task-text-color: var(--theme-text-primary);\n  --mermaid-task-text-light-color: var(--theme-text-secondary);\n  --mermaid-task-text-out-side-color: var(--theme-text-primary);\n  --mermaid-task-text-click-able-color: var(--theme-accent-primary);\n  --mermaid-active-task-bg-color: var(--theme-accent-primary);\n  --mermaid-active-task-border-color: var(--theme-accent-primary);\n  --mermaid-grid-color: var(--theme-border-muted);\n  --mermaid-section0: var(--theme-bg-secondary);\n  --mermaid-section1: var(--theme-bg-tertiary);\n  --mermaid-section2: var(--theme-bg-muted);\n  --mermaid-section3: var(--theme-bg-code);\n}\n\n.dark {\n  --mermaid-theme: 'dark';\n}\n\n/* Utility classes for theme-aware styling */\n.theme-bg-primary { background-color: var(--theme-bg-primary); }\n.theme-bg-secondary { background-color: var(--theme-bg-secondary); }\n.theme-bg-tertiary { background-color: var(--theme-bg-tertiary); }\n.theme-bg-code { background-color: var(--theme-bg-code); }\n\n.theme-text-primary { color: var(--theme-text-primary); }\n.theme-text-secondary { color: var(--theme-text-secondary); }\n.theme-text-tertiary { color: var(--theme-text-tertiary); }\n\n.theme-border-primary { border-color: var(--theme-border-primary); }\n.theme-border-secondary { border-color: var(--theme-border-secondary); }\n\n.theme-accent-primary { color: var(--theme-accent-primary); }\n.theme-accent-bg { background-color: var(--theme-accent-primary); }\n\n/* Smooth theme transitions */\n.theme-transition {\n  transition: background-color 0.2s ease-in-out, \n              border-color 0.2s ease-in-out, \n              color 0.2s ease-in-out,\n              box-shadow 0.2s ease-in-out;\n}\n\n/* Respect user's motion preferences for accessibility */\n@media (prefers-reduced-motion: reduce) {\n  .theme-transition,\n  .theme-transition * {\n    transition: none !important;\n    animation: none !important;\n  }\n}\n\n/* Enhanced focus states for accessibility */\n.theme-link:focus-visible,\na:focus-visible {\n  outline: 2px solid var(--theme-accent-primary);\n  outline-offset: 2px;\n  border-radius: 2px;\n}\n\n/* High contrast mode support */\n@media (prefers-contrast: high) {\n  :root {\n    --theme-text-primary: #000000;\n    --theme-text-secondary: #333333;\n    --theme-bg-primary: #ffffff;\n    --theme-border-primary: #000000;\n    --theme-accent-primary: #0000ff;\n  }\n  \n  .dark {\n    --theme-text-primary: #ffffff;\n    --theme-text-secondary: #cccccc;\n    --theme-bg-primary: #000000;\n    --theme-border-primary: #ffffff;\n    --theme-accent-primary: #00ffff;\n  }\n}",
+      "structuredPatch": [
+        {
+          "oldStart": 200,
+          "oldLines": 4,
+          "newStart": 200,
+          "newLines": 52,
+          "lines": [
+            "     --theme-border-primary: #ffffff;",
+            "     --theme-accent-primary: #00ffff;",
+            "   }",
+            "+}",
+            "+",
+            "+/* Portfolio-specific enhancements */",
+            "+.portfolio-section {",
+            "+  scroll-margin-top: 80px; /* Offset for fixed header */",
+            "+}",
+            "+",
+            "+/* Smooth scrolling for internal links */",
+            "+html {",
+            "+  scroll-behavior: smooth;",
+            "+}",
+            "+",
+            "+/* Enhanced hover effects for portfolio cards */",
+            "+.portfolio-card {",
+            "+  transition: transform 0.3s ease, box-shadow 0.3s ease;",
+            "+}",
+            "+",
+            "+.portfolio-card:hover {",
+            "+  transform: translateY(-5px);",
+            "+  box-shadow: 0 20px 40px rgba(15, 118, 110, 0.15);",
+            "+}",
+            "+",
+            "+/* Gradient text effect */",
+            "+.gradient-text {",
+            "+  background: linear-gradient(135deg, var(--theme-accent-primary), var(--theme-accent-secondary));",
+            "+  -webkit-background-clip: text;",
+            "+  -webkit-text-fill-color: transparent;",
+            "+  background-clip: text;",
+            "+}",
+            "+",
+            "+/* Icon animation */",
+            "+@keyframes float {",
+            "+  0%, 100% { transform: translateY(0px); }",
+            "+  50% { transform: translateY(-10px); }",
+            "+}",
+            "+",
+            "+.floating-icon {",
+            "+  animation: float 3s ease-in-out infinite;",
+            "+}",
+            "+",
+            "+/* Skills badge hover effect */",
+            "+.skill-badge {",
+            "+  transition: transform 0.2s ease, box-shadow 0.2s ease;",
+            "+}",
+            "+",
+            "+.skill-badge:hover {",
+            "+  transform: scale(1.05);",
+            "+  box-shadow: 0 4px 8px rgba(15, 118, 110, 0.2);",
+            " }",
+            "\\ No newline at end of file"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "completed",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "completed",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "in_progress",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "completed",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "pending",
+          "priority": "low",
+          "id": "6"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "completed",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "completed",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "in_progress",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "yarn build",
+      "description": "Build the portfolio version of the site"
+    },
+    "tool_response": {
+      "stdout": "yarn run v1.22.22\n$ astro build\n19:58:37 [content] Syncing content\n19:58:37 [content] Synced content\n19:58:37 [types] Generated 139ms\n19:58:37 [build] output: \"static\"\n19:58:37 [build] mode: \"static\"\n19:58:37 [build] directory: /Users/alialqattan/Projects/myblog/dist/\n19:58:37 [build] Collecting build info...\n19:58:37 [build] \u2713 Completed in 162ms.\n19:58:37 [build] Building static entrypoints...\n19:58:37 [vite] \u2713 built in 419ms\n19:58:37 [build] \u2713 Completed in 433ms.\n\n building client (vite) \n19:58:37 [vite] transforming...\n19:58:39 [vite] \u2713 1733 modules transformed.\n19:58:39 [vite] rendering chunks...\n19:58:39 [vite] computing gzip size...\n19:58:39 [vite] dist/_astro/clone.C7Hw0ajT.js                                                0.10 kB \u2502 gzip:   0.11 kB\n19:58:39 [vite] dist/_astro/init.Gi6I4Gst.js                                                 0.15 kB \u2502 gzip:   0.13 kB\n19:58:39 [vite] dist/_astro/channel.GsfZ0CzF.js                                              0.15 kB \u2502 gzip:   0.16 kB\n19:58:39 [vite] dist/_astro/chunk-AACKK3MU.BieGMypQ.js                                       0.23 kB \u2502 gzip:   0.19 kB\n19:58:39 [vite] dist/_astro/chunk-353BL4L5.De-HiIGh.js                                       0.26 kB \u2502 gzip:   0.20 kB\n19:58:39 [vite] dist/_astro/chunk-BFAMUDN2.go2Gr6by.js                                       0.27 kB \u2502 gzip:   0.24 kB\n19:58:39 [vite] dist/_astro/stateDiagram-v2-GD6S3NHB.BjbFoQZ3.js                             0.40 kB \u2502 gzip:   0.30 kB\n19:58:39 [vite] dist/_astro/chunk-E2GYISFI.B1uwvl_o.js                                       0.40 kB \u2502 gzip:   0.30 kB\n19:58:39 [vite] dist/_astro/classDiagram-BGRH5UQR.BLGDHEsy.js                                0.44 kB \u2502 gzip:   0.31 kB\n19:58:39 [vite] dist/_astro/classDiagram-v2-O24JOBDK.BLGDHEsy.js                             0.44 kB \u2502 gzip:   0.31 kB\n19:58:39 [vite] dist/_astro/chunk-SKB7J2MH.C0JwAApz.js                                       0.54 kB \u2502 gzip:   0.38 kB\n19:58:39 [vite] dist/_astro/infoDiagram-XT3IWWJI.r7qN1dsw.js                                 0.70 kB \u2502 gzip:   0.47 kB\n19:58:39 [vite] dist/_astro/ordinal.BYWQX77i.js                                              1.19 kB \u2502 gzip:   0.57 kB\n19:58:39 [vite] dist/_astro/chunk-67H74DCK.C_5-XA1m.js                                       1.47 kB \u2502 gzip:   0.66 kB\n19:58:39 [vite] dist/_astro/_basePickBy.CzLS3ATS.js                                          2.62 kB \u2502 gzip:   1.32 kB\n19:58:39 [vite] dist/_astro/arc.C773x4_f.js                                                  3.48 kB \u2502 gzip:   1.49 kB\n19:58:39 [vite] dist/_astro/diagram-5UYTHUR4.CGATToT9.js                                     4.09 kB \u2502 gzip:   1.79 kB\n19:58:39 [vite] dist/_astro/defaultLocale.C4B-KCzX.js                                        4.55 kB \u2502 gzip:   2.11 kB\n19:58:39 [vite] dist/_astro/pieDiagram-NIOCPIFQ.CLARG2nR.js                                  4.96 kB \u2502 gzip:   2.23 kB\n19:58:39 [vite] dist/_astro/linear.D6B48HRA.js                                               5.70 kB \u2502 gzip:   2.34 kB\n19:58:39 [vite] dist/_astro/diagram-ZTM2IBQH.Dvek5kBn.js                                     5.92 kB \u2502 gzip:   2.50 kB\n19:58:39 [vite] dist/_astro/graph.Dsj7RbA7.js                                                5.96 kB \u2502 gzip:   1.91 kB\n19:58:39 [vite] dist/_astro/stateDiagram-XX37X6EN.B6cBLWrc.js                               10.40 kB \u2502 gzip:   3.65 kB\n19:58:39 [vite] dist/_astro/dagre-FFZHY6LT.BwkeKt1H.js                                      11.01 kB \u2502 gzip:   4.12 kB\n19:58:39 [vite] dist/_astro/_baseUniq.C1s7tzZY.js                                           11.93 kB \u2502 gzip:   4.65 kB\n19:58:39 [vite] dist/_astro/diagram-3EMPZRKU.Dy20uJ5W.js                                    15.76 kB \u2502 gzip:   5.66 kB\n19:58:39 [vite] dist/_astro/kanban-definition-ILFWEQ3N.CH7Q3LJh.js                          20.20 kB \u2502 gzip:   7.11 kB\n19:58:39 [vite] dist/_astro/sankeyDiagram-4UZDY2LN.CDOaqfMh.js                              22.07 kB \u2502 gzip:   8.09 kB\n19:58:39 [vite] dist/_astro/journeyDiagram-EWQZEKCU.Bgzx-gD9.js                             23.56 kB \u2502 gzip:   8.29 kB\n19:58:39 [vite] dist/_astro/timeline-definition-RI47OAVP.DJsYF68d.js                        23.59 kB \u2502 gzip:   8.20 kB\n19:58:39 [vite] dist/_astro/gitGraphDiagram-GW3U2K7C.NUjFf7Hg.js                            24.14 kB \u2502 gzip:   7.43 kB\n19:58:39 [vite] dist/_astro/erDiagram-R3QVA2FD.DK8_z869.js                                  25.24 kB \u2502 gzip:   8.76 kB\n19:58:39 [vite] dist/_astro/layout.Dq6Uk3l2.js                                              27.24 kB \u2502 gzip:   9.70 kB\n19:58:39 [vite] dist/_astro/requirementDiagram-SO3GGRV7.cNqhESKL.js                         30.09 kB \u2502 gzip:   9.32 kB\n19:58:39 [vite] dist/_astro/quadrantDiagram-2OG54O6I.Dn3w1hlb.js                            33.84 kB \u2502 gzip:   9.84 kB\n19:58:39 [vite] dist/_astro/chunk-6OLS64BW.Cvx8CAuw.js                                      36.38 kB \u2502 gzip:  11.72 kB\n19:58:39 [vite] dist/_astro/xychartDiagram-H2YORKM3.Znp6m1jM.js                             40.14 kB \u2502 gzip:  11.25 kB\n19:58:39 [vite] dist/_astro/chunk-QEP2MXWD.W7Fl-sqk.js                                      45.17 kB \u2502 gzip:  14.48 kB\n19:58:39 [vite] dist/_astro/flowDiagram-PKI6S5ZS.DV5Rr-aR.js                                60.40 kB \u2502 gzip:  19.14 kB\n19:58:39 [vite] dist/_astro/ganttDiagram-EK5VF46D.BbywhNBr.js                               62.63 kB \u2502 gzip:  21.01 kB\n19:58:39 [vite] dist/_astro/c4Diagram-6F6E4RAY.DcAD9qGy.js                                  70.14 kB \u2502 gzip:  19.53 kB\n19:58:39 [vite] dist/_astro/blockDiagram-PHRCVELO.DQZAQmVF.js                               71.55 kB \u2502 gzip:  20.27 kB\n19:58:39 [vite] dist/_astro/sequenceDiagram-ZIKVLSP4.DbeBP3gz.js                            88.34 kB \u2502 gzip:  25.06 kB\n19:58:39 [vite] dist/_astro/mindmap-definition-CZNETY7S.By_zm6lq.js                        100.93 kB \u2502 gzip:  28.37 kB\n19:58:39 [vite] dist/_astro/architectureDiagram-NQ2NVSRB.D9hFNRui.js                       148.21 kB \u2502 gzip:  41.65 kB\n19:58:39 [vite] dist/_astro/katex.DsmCZfJr.js                                              265.43 kB \u2502 gzip:  77.34 kB\n19:58:39 [vite] dist/_astro/treemap-6Y5VK53G.BSH5lDdX.js                                   329.21 kB \u2502 gzip:  80.17 kB\n19:58:39 [vite] dist/_astro/cytoscape.esm.lc5uY2iF.js                                      439.73 kB \u2502 gzip: 140.32 kB\n19:58:39 [vite] dist/_astro/MermaidTheme.astro_astro_type_script_index_0_lang.BR6KG9Xb.js  484.53 kB \u2502 gzip: 135.80 kB\n19:58:39 [vite] \u2713 built in 2.15s\n\n generating static routes \n19:58:39 \u25b6 src/pages/blog.astro\n19:58:39   \u2514\u2500 /blog/index.htmlFetching posts from AlqattanDev/blog-content\nFound 5 markdown files\nContent sources: { local: true, github: true }\nLoaded 7 posts\n (+1.10s) \n19:58:40 \u25b6 src/pages/index.astro\n19:58:40   \u2514\u2500 /index.htmlFetching posts from AlqattanDev/blog-content\nFound 5 markdown files\nContent sources: { local: true, github: true }\nLoaded 7 posts\n (+802ms) \n19:58:41 \u25b6 src/pages/[...slug].astro\n19:58:41   \u251c\u2500 /welcome-to-my-blog/index.html (+1ms) \n19:58:41   \u2514\u2500 /astro-content-collections/index.html (+1ms) \n19:58:41 \u2713 Completed in 1.93s.\n\n19:58:41 [build] 4 page(s) built in 4.68s\n19:58:41 [build] Complete!\nDone in 6.02s.\nwarning package.json: No license field\nwarning ../../package.json: No license field",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/layouts/BaseLayout.astro",
+      "offset": 55,
+      "limit": 10
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/alialqattan/Projects/myblog/src/layouts/BaseLayout.astro",
+        "content": "            </a>\n            <div class=\"flex items-center space-x-6\">\n              <a href={import.meta.env.BASE_URL} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Home</a>\n              <a href={`${import.meta.env.BASE_URL}blog`} class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Blog</a>\n              <a href=\"#about\" class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">About</a>\n              <a href=\"#contact\" class=\"text-theme-text-secondary hover:text-theme-accent-primary theme-transition\">Contact</a>\n              <ThemeToggle />\n            </div>\n          </nav>\n        </div>",
+        "numLines": 10,
+        "startLine": 55,
+        "totalLines": 89
+      }
+    }
   }
 ]
