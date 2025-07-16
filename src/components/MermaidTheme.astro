@@ -32,8 +32,7 @@
         section1: isDark ? '#374151' : '#f3f4f6',
         section2: isDark ? '#334155' : '#f1f5f9',
         section3: isDark ? '#1e293b' : '#f8fafc',
-        // Node colors for flowcharts
-        primaryColor: isDark ? '#60a5fa' : '#3b82f6',
+        // Node colors for flowcharts  
         secondaryColor: isDark ? '#a78bfa' : '#8b5cf6',
         tertiaryColor: isDark ? '#34d399' : '#10b981',
         // Background and text for nodes
@@ -55,7 +54,49 @@
     
     mermaid.initialize(config);
     
-    // Re-render all existing Mermaid diagrams
+    // Find code blocks with mermaid language and convert them to diagrams
+    const mermaidCodeBlocks = document.querySelectorAll('pre code[class*="language-mermaid"]');
+    mermaidCodeBlocks.forEach((codeElement, index) => {
+      const graphDefinition = codeElement.textContent || codeElement.innerHTML;
+      if (graphDefinition && graphDefinition.trim()) {
+        // Create a container for the mermaid diagram
+        const mermaidContainer = document.createElement('div');
+        mermaidContainer.className = 'mermaid-diagram';
+        mermaidContainer.style.cssText = `
+          display: flex;
+          justify-content: center;
+          margin: 1.5rem 0;
+          padding: 1rem;
+          background-color: var(--theme-bg-code);
+          border: 1px solid var(--theme-border-primary);
+          border-radius: 0.5rem;
+          transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+          overflow-x: auto;
+        `;
+        
+        // Create a unique ID for this diagram
+        const diagramId = `mermaid-diagram-${index}`;
+        mermaidContainer.id = diagramId;
+        
+        // Replace the code block with the mermaid container
+        const preElement = codeElement.closest('pre');
+        if (preElement && preElement.parentNode) {
+          preElement.parentNode.insertBefore(mermaidContainer, preElement);
+          preElement.remove();
+        }
+        
+        // Render the diagram
+        mermaid.render(diagramId + '-svg', graphDefinition).then(({ svg }) => {
+          mermaidContainer.innerHTML = svg;
+        }).catch((error) => {
+          console.error('Mermaid rendering error:', error);
+          // Fallback: restore original code block
+          mermaidContainer.innerHTML = `<pre><code class="language-mermaid">${graphDefinition}</code></pre>`;
+        });
+      }
+    });
+    
+    // Also handle any existing .mermaid elements (for compatibility)
     const mermaidElements = document.querySelectorAll('.mermaid');
     mermaidElements.forEach((element, index) => {
       const graphDefinition = element.textContent || element.innerHTML;
@@ -65,7 +106,7 @@
         element.removeAttribute('data-processed');
         
         // Create a unique ID for this diagram
-        const diagramId = `mermaid-diagram-${index}`;
+        const diagramId = `mermaid-existing-${index}`;
         element.id = diagramId;
         
         // Render the diagram

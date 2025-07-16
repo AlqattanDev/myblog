@@ -2,7 +2,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
-import remarkMermaid from 'remark-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,7 +10,6 @@ export default defineConfig({
     mdx()
   ],
   markdown: {
-    remarkPlugins: [remarkMermaid],
     shikiConfig: {
       themes: {
         light: 'github-light',
@@ -30,7 +28,8 @@ export default defineConfig({
         'css',
         'sql',
         'yaml',
-        'markdown'
+        'markdown',
+        'mermaid'
       ]
     }
   },
