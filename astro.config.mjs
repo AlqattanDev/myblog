@@ -13,7 +13,12 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkMermaid],
     shikiConfig: {
-      theme: 'github-dark-default',
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark-default'
+      },
+      defaultColor: false,
+      cssVariablePrefix: '--shiki-',
       wrap: true,
       langs: [
         'javascript',

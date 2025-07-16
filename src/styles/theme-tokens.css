@@ -1,0 +1,188 @@
+/* Theme Token System - Centralized color management for light/dark modes */
+
+:root {
+  /* Base semantic color tokens */
+  --theme-bg-primary: #ffffff;
+  --theme-bg-secondary: #f9fafb;
+  --theme-bg-tertiary: #f3f4f6;
+  --theme-bg-code: #f8fafc;
+  --theme-bg-muted: #f1f5f9;
+  
+  --theme-text-primary: #111827;
+  --theme-text-secondary: #6b7280;
+  --theme-text-tertiary: #9ca3af;
+  --theme-text-muted: #64748b;
+  --theme-text-inverse: #f9fafb;
+  
+  --theme-border-primary: #e5e7eb;
+  --theme-border-secondary: #d1d5db;
+  --theme-border-muted: #f1f5f9;
+  
+  --theme-accent-primary: #3b82f6;
+  --theme-accent-primary-hover: #2563eb;
+  --theme-accent-secondary: #8b5cf6;
+  --theme-accent-success: #10b981;
+  
+  /* Component-specific tokens */
+  --theme-code-text: #1e40af;
+  --theme-code-bg: #f1f5f9;
+  --theme-link-color: #2563eb;
+  --theme-link-hover: #1d4ed8;
+  
+  /* Shiki syntax highlighting CSS variables for light theme */
+  --shiki-color-text: #24292e;
+  --shiki-color-background: #ffffff;
+  --shiki-token-constant: #005cc5;
+  --shiki-token-string: #032f62;
+  --shiki-token-comment: #6a737d;
+  --shiki-token-keyword: #d73a49;
+  --shiki-token-parameter: #24292e;
+  --shiki-token-function: #6f42c1;
+  --shiki-token-string-expression: #032f62;
+  --shiki-token-punctuation: #24292e;
+  --shiki-token-link: #005cc5;
+}
+
+.dark {
+  /* Dark theme overrides */
+  --theme-bg-primary: #111827;
+  --theme-bg-secondary: #1f2937;
+  --theme-bg-tertiary: #374151;
+  --theme-bg-code: #1e293b;
+  --theme-bg-muted: #334155;
+  
+  --theme-text-primary: #f9fafb;
+  --theme-text-secondary: #d1d5db;
+  --theme-text-tertiary: #9ca3af;
+  --theme-text-muted: #94a3b8;
+  --theme-text-inverse: #111827;
+  
+  --theme-border-primary: #374151;
+  --theme-border-secondary: #4b5563;
+  --theme-border-muted: #475569;
+  
+  --theme-accent-primary: #60a5fa;
+  --theme-accent-primary-hover: #3b82f6;
+  --theme-accent-secondary: #a78bfa;
+  --theme-accent-success: #34d399;
+  
+  --theme-code-text: #60a5fa;
+  --theme-code-bg: #334155;
+  --theme-link-color: #60a5fa;
+  --theme-link-hover: #93c5fd;
+  
+  /* Shiki syntax highlighting CSS variables for dark theme */
+  --shiki-color-text: #e6edf3;
+  --shiki-color-background: #0d1117;
+  --shiki-token-constant: #79c0ff;
+  --shiki-token-string: #a5d6ff;
+  --shiki-token-comment: #8b949e;
+  --shiki-token-keyword: #ff7b72;
+  --shiki-token-parameter: #e6edf3;
+  --shiki-token-function: #d2a8ff;
+  --shiki-token-string-expression: #a5d6ff;
+  --shiki-token-punctuation: #e6edf3;
+  --shiki-token-link: #79c0ff;
+}
+
+/* Shiki code block theme integration */
+pre.astro-code {
+  background-color: var(--shiki-color-background) !important;
+  color: var(--shiki-color-text) !important;
+  border: 1px solid var(--theme-border-primary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Mermaid diagram theme variables */
+:root {
+  --mermaid-theme: 'base';
+  --mermaid-primary-color: var(--theme-accent-primary);
+  --mermaid-primary-text-color: var(--theme-text-primary);
+  --mermaid-primary-border-color: var(--theme-border-primary);
+  --mermaid-line-color: var(--theme-border-secondary);
+  --mermaid-section-bg-color: var(--theme-bg-secondary);
+  --mermaid-alt-section-bg-color: var(--theme-bg-tertiary);
+  --mermaid-grid-color: var(--theme-border-muted);
+  --mermaid-text-color: var(--theme-text-primary);
+  --mermaid-task-bg-color: var(--theme-bg-secondary);
+  --mermaid-task-text-color: var(--theme-text-primary);
+  --mermaid-task-text-light-color: var(--theme-text-secondary);
+  --mermaid-task-text-out-side-color: var(--theme-text-primary);
+  --mermaid-task-text-click-able-color: var(--theme-accent-primary);
+  --mermaid-active-task-bg-color: var(--theme-accent-primary);
+  --mermaid-active-task-border-color: var(--theme-accent-primary);
+  --mermaid-grid-color: var(--theme-border-muted);
+  --mermaid-section0: var(--theme-bg-secondary);
+  --mermaid-section1: var(--theme-bg-tertiary);
+  --mermaid-section2: var(--theme-bg-muted);
+  --mermaid-section3: var(--theme-bg-code);
+}
+
+.dark {
+  --mermaid-theme: 'dark';
+}
+
+/* Utility classes for theme-aware styling */
+.theme-bg-primary { background-color: var(--theme-bg-primary); }
+.theme-bg-secondary { background-color: var(--theme-bg-secondary); }
+.theme-bg-tertiary { background-color: var(--theme-bg-tertiary); }
+.theme-bg-code { background-color: var(--theme-bg-code); }
+
+.theme-text-primary { color: var(--theme-text-primary); }
+.theme-text-secondary { color: var(--theme-text-secondary); }
+.theme-text-tertiary { color: var(--theme-text-tertiary); }
+
+.theme-border-primary { border-color: var(--theme-border-primary); }
+.theme-border-secondary { border-color: var(--theme-border-secondary); }
+
+.theme-accent-primary { color: var(--theme-accent-primary); }
+.theme-accent-bg { background-color: var(--theme-accent-primary); }
+
+/* Smooth theme transitions */
+.theme-transition {
+  transition: background-color 0.2s ease-in-out, 
+              border-color 0.2s ease-in-out, 
+              color 0.2s ease-in-out,
+              box-shadow 0.2s ease-in-out;
+}
+
+/* Respect user's motion preferences for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .theme-transition,
+  .theme-transition * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+.theme-link:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--theme-accent-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --theme-text-primary: #000000;
+    --theme-text-secondary: #333333;
+    --theme-bg-primary: #ffffff;
+    --theme-border-primary: #000000;
+    --theme-accent-primary: #0000ff;
+  }
+  
+  .dark {
+    --theme-text-primary: #ffffff;
+    --theme-text-secondary: #cccccc;
+    --theme-bg-primary: #000000;
+    --theme-border-primary: #ffffff;
+    --theme-accent-primary: #00ffff;
+  }
+}

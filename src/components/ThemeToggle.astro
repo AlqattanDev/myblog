@@ -66,6 +66,11 @@
     
     // Save to localStorage
     localStorage.setItem('theme', theme);
+    
+    // Dispatch custom event for other components to listen to
+    document.dispatchEvent(new CustomEvent('theme-changed', {
+      detail: { theme, isDark }
+    }));
   }
 
   // Initialize theme on page load

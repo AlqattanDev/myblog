@@ -1,5 +1,7 @@
 ---
 import ThemeToggle from '../components/ThemeToggle.astro';
+import MermaidTheme from '../components/MermaidTheme.astro';
+import '../styles/theme-tokens.css';
 
 export interface Props {
   title: string;
@@ -37,18 +39,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:description" content={description} />
     {image && <meta name="twitter:image" content={new URL(image, Astro.url)} />}
   </head>
-  <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased transition-colors duration-200">
+  <body class="min-h-screen bg-theme-bg-primary text-theme-text-primary antialiased theme-transition">
     <div class="flex min-h-screen flex-col">
       <!-- Header -->
-      <header class="border-b border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm transition-colors duration-200">
+      <header class="border-b border-theme-border-primary bg-theme-bg-primary/80 backdrop-blur-sm theme-transition">
         <div class="mx-auto max-w-4xl px-4 py-6">
           <nav class="flex items-center justify-between">
-            <a href={import.meta.env.BASE_URL} class="text-xl font-bold text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
+            <a href={import.meta.env.BASE_URL} class="text-xl font-bold text-theme-text-primary hover:text-theme-accent-primary theme-transition">
               Ali Alqattan
             </a>
             <div class="flex items-center space-x-6">
-              <a href={import.meta.env.BASE_URL} class="text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">Blog</a>
-              <a href={`${import.meta.env.BASE_URL}/about`} class="text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">About</a>
+              <a href={import.meta.env.BASE_URL} class="text-theme-text-secondary hover:text-theme-accent-primary theme-transition">Blog</a>
+              <a href={`${import.meta.env.BASE_URL}/about`} class="text-theme-text-secondary hover:text-theme-accent-primary theme-transition">About</a>
               <ThemeToggle />
             </div>
           </nav>
@@ -61,17 +63,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       </main>
 
       <!-- Footer -->
-      <footer class="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
+      <footer class="border-t border-theme-border-primary bg-theme-bg-secondary theme-transition">
         <div class="mx-auto max-w-4xl px-4 py-8">
-          <div class="text-center text-sm text-gray-600 dark:text-gray-300">
+          <div class="text-center text-sm text-theme-text-secondary">
             <p>&copy; {new Date().getFullYear()} Ali Alqattan. All rights reserved.</p>
             <p class="mt-2">
-              Built with <a href="https://astro.build" class="text-primary-600 dark:text-primary-300 hover:text-primary-700 dark:hover:text-primary-200 transition-colors">Astro</a>
-              and deployed on <a href="https://pages.github.com" class="text-primary-600 dark:text-primary-300 hover:text-primary-700 dark:hover:text-primary-200 transition-colors">GitHub Pages</a>
+              Built with <a href="https://astro.build" class="theme-link">Astro</a>
+              and deployed on <a href="https://pages.github.com" class="theme-link">GitHub Pages</a>
             </p>
           </div>
         </div>
       </footer>
     </div>
+    
+    <!-- Mermaid theme integration -->
+    <MermaidTheme />
   </body>
 </html>

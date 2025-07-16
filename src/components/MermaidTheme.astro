@@ -1,0 +1,151 @@
+---
+// Mermaid Theme Integration Component
+// This component provides client-side Mermaid theme switching
+---
+
+<script>
+  import mermaid from 'mermaid';
+
+  // Mermaid theme configuration based on current theme
+  function getMermaidConfig(isDark: boolean) {
+    return {
+      startOnLoad: true,
+      theme: isDark ? 'dark' : 'base',
+      themeVariables: {
+        // Light theme variables
+        primaryColor: isDark ? '#60a5fa' : '#3b82f6',
+        primaryTextColor: isDark ? '#f9fafb' : '#111827',
+        primaryBorderColor: isDark ? '#374151' : '#e5e7eb',
+        lineColor: isDark ? '#4b5563' : '#d1d5db',
+        sectionBkgColor: isDark ? '#1f2937' : '#f9fafb',
+        altSectionBkgColor: isDark ? '#374151' : '#f3f4f6',
+        gridColor: isDark ? '#475569' : '#f1f5f9',
+        textColor: isDark ? '#f9fafb' : '#111827',
+        taskBkgColor: isDark ? '#1f2937' : '#f9fafb',
+        taskTextColor: isDark ? '#f9fafb' : '#111827',
+        taskTextLightColor: isDark ? '#d1d5db' : '#6b7280',
+        taskTextOutsideColor: isDark ? '#f9fafb' : '#111827',
+        taskTextClickableColor: isDark ? '#60a5fa' : '#3b82f6',
+        activeTaskBkgColor: isDark ? '#60a5fa' : '#3b82f6',
+        activeTaskBorderColor: isDark ? '#60a5fa' : '#3b82f6',
+        section0: isDark ? '#1f2937' : '#f9fafb',
+        section1: isDark ? '#374151' : '#f3f4f6',
+        section2: isDark ? '#334155' : '#f1f5f9',
+        section3: isDark ? '#1e293b' : '#f8fafc',
+        // Node colors for flowcharts
+        primaryColor: isDark ? '#60a5fa' : '#3b82f6',
+        secondaryColor: isDark ? '#a78bfa' : '#8b5cf6',
+        tertiaryColor: isDark ? '#34d399' : '#10b981',
+        // Background and text for nodes
+        background: isDark ? '#111827' : '#ffffff',
+        mainBkg: isDark ? '#1f2937' : '#f9fafb',
+        secondBkg: isDark ? '#374151' : '#f3f4f6',
+        tertiaryBkg: isDark ? '#334155' : '#f1f5f9',
+      },
+      securityLevel: 'loose',
+      fontFamily: 'Inter, system-ui, sans-serif',
+      fontSize: 14,
+    };
+  }
+
+  // Initialize Mermaid with current theme
+  function initializeMermaid() {
+    const isDark = document.documentElement.classList.contains('dark');
+    const config = getMermaidConfig(isDark);
+    
+    mermaid.initialize(config);
+    
+    // Re-render all existing Mermaid diagrams
+    const mermaidElements = document.querySelectorAll('.mermaid');
+    mermaidElements.forEach((element, index) => {
+      const graphDefinition = element.textContent || element.innerHTML;
+      if (graphDefinition && graphDefinition.trim()) {
+        // Clear the element and re-render
+        element.innerHTML = '';
+        element.removeAttribute('data-processed');
+        
+        // Create a unique ID for this diagram
+        const diagramId = `mermaid-diagram-${index}`;
+        element.id = diagramId;
+        
+        // Render the diagram
+        mermaid.render(diagramId, graphDefinition).then(({ svg }) => {
+          element.innerHTML = svg;
+        }).catch((error) => {
+          console.error('Mermaid rendering error:', error);
+          // Fallback: restore original content
+          element.innerHTML = `<pre><code>${graphDefinition}</code></pre>`;
+        });
+      }
+    });
+  }
+
+  // Function to handle theme changes
+  function handleThemeChange() {
+    // Small delay to ensure theme class has been applied
+    setTimeout(initializeMermaid, 100);
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', initializeMermaid);
+
+  // Listen for theme changes
+  // We'll observe changes to the 'dark' class on the document element
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        const target = mutation.target as HTMLElement;
+        if (target === document.documentElement) {
+          handleThemeChange();
+        }
+      }
+    });
+  });
+
+  // Start observing
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
+
+  // Also listen for storage events (in case theme is changed in another tab)
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'theme') {
+      handleThemeChange();
+    }
+  });
+
+  // Custom event listener for manual theme changes
+  document.addEventListener('theme-changed', handleThemeChange);
+</script>
+
+<style>
+  /* Enhanced Mermaid diagram styling */
+  .mermaid {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: var(--theme-bg-code);
+    border: 1px solid var(--theme-border-primary);
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    overflow-x: auto;
+  }
+
+  .mermaid svg {
+    max-width: 100%;
+    height: auto;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .mermaid {
+      margin: 1rem -1rem;
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+    }
+  }
+</style>
