@@ -6,8 +6,6 @@ tags: ["astro", "content-collections", "typescript"]
 draft: false
 ---
 
-# Working with Astro Content Collections
-
 Astro's content collections provide a powerful way to manage and organize content with full TypeScript support.
 
 ## Benefits of Content Collections

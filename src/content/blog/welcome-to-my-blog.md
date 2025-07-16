@@ -6,8 +6,6 @@ tags: ["welcome", "astro", "blog"]
 draft: false
 ---
 
-# Welcome to My Blog
-
 This is the inaugural post on my new blog system! This blog is built with:
 
 - **Astro** for static site generation
