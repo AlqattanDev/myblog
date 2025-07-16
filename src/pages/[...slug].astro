@@ -1,0 +1,26 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BlogPost from '../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  // For now, only use local content collections for static generation
+  // GitHub content integration will be used for dynamic content in the future
+  const posts = await getCollection('blog', ({ data }) => {
+    return !data.draft; // Only published posts
+  });
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+type Props = CollectionEntry<'blog'>;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<BlogPost post={post}>
+  <Content />
+</BlogPost>

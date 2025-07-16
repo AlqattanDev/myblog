@@ -1,0 +1,50 @@
+[
+  {
+    "session_id": "c280bb5a-fd85-49cc-b78d-730695dd474a",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/c280bb5a-fd85-49cc-b78d-730695dd474a.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "c280bb5a-fd85-49cc-b78d-730695dd474a",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/c280bb5a-fd85-49cc-b78d-730695dd474a.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "4ab0ce60-6482-40ae-9faa-99a9da0ef591",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4ab0ce60-6482-40ae-9faa-99a9da0ef591.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "4ab0ce60-6482-40ae-9faa-99a9da0ef591",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4ab0ce60-6482-40ae-9faa-99a9da0ef591.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "4ab0ce60-6482-40ae-9faa-99a9da0ef591",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4ab0ce60-6482-40ae-9faa-99a9da0ef591.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "4ab0ce60-6482-40ae-9faa-99a9da0ef591",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4ab0ce60-6482-40ae-9faa-99a9da0ef591.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "4ab0ce60-6482-40ae-9faa-99a9da0ef591",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4ab0ce60-6482-40ae-9faa-99a9da0ef591.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "4ab0ce60-6482-40ae-9faa-99a9da0ef591",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4ab0ce60-6482-40ae-9faa-99a9da0ef591.jsonl",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  }
+]

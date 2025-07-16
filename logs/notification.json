@@ -1,0 +1,72 @@
+[
+  {
+    "session_id": "c280bb5a-fd85-49cc-b78d-730695dd474a",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/c280bb5a-fd85-49cc-b78d-730695dd474a.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "c280bb5a-fd85-49cc-b78d-730695dd474a",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/c280bb5a-fd85-49cc-b78d-730695dd474a.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "869b0b30-e6c7-4092-ade7-d7addd4d5434",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/869b0b30-e6c7-4092-ade7-d7addd4d5434.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "message": "Claude needs your input",
+    "type": "notification"
+  },
+  {
+    "session_id": "b28a30bd-9e48-460d-aa86-7d120bfb75d1",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/b28a30bd-9e48-460d-aa86-7d120bfb75d1.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "96c42019-098a-49b5-95f4-fcf171656887",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/96c42019-098a-49b5-95f4-fcf171656887.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "4ab0ce60-6482-40ae-9faa-99a9da0ef591",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4ab0ce60-6482-40ae-9faa-99a9da0ef591.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "93e08184-4bf3-41a4-96d6-078601b4334d",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/93e08184-4bf3-41a4-96d6-078601b4334d.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "93e08184-4bf3-41a4-96d6-078601b4334d",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/93e08184-4bf3-41a4-96d6-078601b4334d.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "343d9ac2-b1c3-4abc-b1de-a6d04f23a64a",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/343d9ac2-b1c3-4abc-b1de-a6d04f23a64a.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "343d9ac2-b1c3-4abc-b1de-a6d04f23a64a",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/343d9ac2-b1c3-4abc-b1de-a6d04f23a64a.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "5bc18351-dbd3-42f8-85fe-769a588e654a",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/5bc18351-dbd3-42f8-85fe-769a588e654a.jsonl",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  }
+]

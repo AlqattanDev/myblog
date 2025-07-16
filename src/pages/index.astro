@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { ContentManager } from '../utils/content-manager.js';
+
+// Initialize content manager and get all posts
+const contentManager = new ContentManager();
+const allPosts = await contentManager.getAllPosts();
+
+// Get content source information for debugging
+const contentSources = contentManager.getContentSources();
+console.log('Content sources:', contentSources);
+console.log(`Loaded ${allPosts.length} posts`);
+
+// Filter posts that can be rendered (local content collections only for now)
+const renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');
+const githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));
+---
+
+<BaseLayout 
+  title="Ali Alqattan's Blog" 
+  description="Thoughts on software development, technology, and more"
+>
+  <div class="mx-auto max-w-4xl px-4 py-12">
+    <!-- Hero Section -->
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-6xl">
+        Welcome to my blog
+      </h1>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 sm:text-xl">
+        Thoughts on software development, technology, and the craft of building things
+      </p>
+    </header>
+
+    <!-- Posts Section -->
+    <section>
+      <h2 class="mb-8 text-2xl font-semibold text-gray-900 dark:text-gray-100">
+        Latest Posts
+      </h2>
+      
+      {renderablePosts.length === 0 ? (
+        <div class="text-center py-12">
+          <p class="text-gray-600 dark:text-gray-400">No posts published yet. Check back soon!</p>
+        </div>
+      ) : (
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+          {renderablePosts.map((post) => (
+            <PostCard post={post} />
+          ))}
+        </div>
+      )}
+
+      {/* GitHub Content Preview */}
+      {githubOnlyPosts.length > 0 && (
+        <div class="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
+          <h3 class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">
+            📡 GitHub Content Available
+          </h3>
+          <p class="text-blue-800 dark:text-blue-200 text-sm mb-3">
+            Found {githubOnlyPosts.length} additional posts from GitHub repository. These will be available in production builds.
+          </p>
+          <div class="space-y-2">
+            {githubOnlyPosts.map((post) => (
+              <div class="text-sm text-blue-700 dark:text-blue-300">
+                • <strong>{post.data.title}</strong> ({post.slug})
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+
+    <!-- About Section -->
+    <section class="mt-16 border-t border-gray-200 dark:border-gray-700 pt-12">
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+          About This Blog
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          This blog is built with Astro and automatically syncs content from a GitHub repository. 
+          It features advanced markdown processing, Mermaid diagrams, syntax highlighting, and a 
+          modern responsive design.
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

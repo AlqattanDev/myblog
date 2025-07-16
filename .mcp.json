@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": [
+        "tsx",
+        "/Users/alialqattan/Projects/mcp-controlm/mcp-servers/context7/src/index.ts"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "gemini-assistant": {
+      "command": "python",
+      "args": [
+        "/Users/alialqattan/Projects/mcp-controlm/mcp-servers/mcp-gemini-assistant/gemini_mcp.py"
+      ],
+      "env": {
+        "PYTHONPATH": "/Users/alialqattan/Projects/mcp-controlm/mcp-servers/mcp-gemini-assistant"
+      }
+    }
+  }
+}
