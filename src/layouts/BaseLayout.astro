@@ -22,6 +22,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
     <meta name="generator" content={Astro.generator} />
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    
     <!-- SEO -->
     <title>{title}</title>
     <link rel="canonical" href={canonicalURL} />
@@ -39,7 +44,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:description" content={description} />
     {image && <meta name="twitter:image" content={new URL(image, Astro.url)} />}
   </head>
-  <body class="min-h-screen bg-theme-bg-primary text-theme-text-primary antialiased theme-transition">
+  <body class="min-h-screen bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-tertiary text-theme-text-primary antialiased theme-transition">
     <div class="flex min-h-screen flex-col">
       <!-- Header -->
       <header class="border-b border-theme-border-primary bg-theme-bg-primary/80 backdrop-blur-sm theme-transition">

@@ -1,33 +1,33 @@
 /* Theme Token System - Centralized color management for light/dark modes */
 
 :root {
-  /* Base semantic color tokens */
+  /* Base semantic color tokens - matching teal/slate design */
   --theme-bg-primary: #ffffff;
-  --theme-bg-secondary: #f9fafb;
-  --theme-bg-tertiary: #f3f4f6;
+  --theme-bg-secondary: #f8fafc;
+  --theme-bg-tertiary: #f1f5f9;
   --theme-bg-code: #f8fafc;
-  --theme-bg-muted: #f1f5f9;
+  --theme-bg-muted: #e2e8f0;
   
-  --theme-text-primary: #111827;
-  --theme-text-secondary: #6b7280;
-  --theme-text-tertiary: #9ca3af;
-  --theme-text-muted: #64748b;
-  --theme-text-inverse: #f9fafb;
+  --theme-text-primary: #1e293b;
+  --theme-text-secondary: #64748b;
+  --theme-text-tertiary: #94a3b8;
+  --theme-text-muted: #94a3b8;
+  --theme-text-inverse: #ffffff;
   
-  --theme-border-primary: #e5e7eb;
-  --theme-border-secondary: #d1d5db;
+  --theme-border-primary: #e2e8f0;
+  --theme-border-secondary: #cbd5e1;
   --theme-border-muted: #f1f5f9;
   
-  --theme-accent-primary: #3b82f6;
-  --theme-accent-primary-hover: #2563eb;
-  --theme-accent-secondary: #8b5cf6;
+  --theme-accent-primary: #0f766e;
+  --theme-accent-primary-hover: #0d9488;
+  --theme-accent-secondary: #14b8a6;
   --theme-accent-success: #10b981;
   
   /* Component-specific tokens */
-  --theme-code-text: #1e40af;
-  --theme-code-bg: #f1f5f9;
-  --theme-link-color: #2563eb;
-  --theme-link-hover: #1d4ed8;
+  --theme-code-text: #0f766e;
+  --theme-code-bg: #f8fafc;
+  --theme-link-color: #0f766e;
+  --theme-link-hover: #0d9488;
   
   /* Shiki syntax highlighting CSS variables for light theme */
   --shiki-color-text: #24292e;
