@@ -98,6 +98,21 @@ pre.astro-code {
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
+/* 
+  Critical: Apply Shiki CSS variables to syntax highlighting spans
+  This connects Shiki's generated variables to the actual color display
+*/
+
+/* Light mode: Use --shiki-light variables for syntax highlighting */
+.astro-code.github-light span {
+  color: var(--shiki-light);
+}
+
+/* Dark mode: Use --shiki-dark variables for syntax highlighting */
+.dark .astro-code.github-dark-default span {
+  color: var(--shiki-dark);
+}
+
 /* Mermaid diagram theme variables */
 :root {
   --mermaid-theme: 'base';
