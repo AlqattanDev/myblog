@@ -8,6 +8,40 @@ module.exports = {
         'serif': ['Playfair Display', 'Georgia', 'serif'],
         'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
+      // Typography configuration to properly handle code highlighting
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            // 1. Style INLINE code tags.
+            // This will apply to `<code>` tags inside paragraphs, lists, etc.
+            'code': {
+              color: 'var(--theme-code-text)',
+              backgroundColor: 'var(--theme-code-bg)',
+              padding: '0.2em 0.4em',
+              borderRadius: '0.25rem',
+              fontWeight: '500',
+            },
+
+            // 2. Reset styles for code tags that are INSIDE a pre block.
+            'pre code': {
+              // Remove the background and padding from the inline code style.
+              backgroundColor: 'transparent',
+              padding: '0',
+              // CRITICAL: Make the text color inherit from the parent <pre> tag.
+              // The <pre> tag's color is correctly set by Shiki's variables.
+              color: 'inherit',
+              fontWeight: 'inherit', // Inherit font weight as well.
+            },
+            
+            // 3. Disable the default quotation marks prose adds around code blocks.
+            'code::before': { content: '""' },
+            'code::after': { content: '""' },
+            
+            // 4. (Optional but recommended) Let our custom CSS handle the <pre> container.
+            'pre': false,
+          },
+        },
+      }),
       colors: {
         primary: {
           DEFAULT: '#0f766e',
