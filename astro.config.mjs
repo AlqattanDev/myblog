@@ -33,6 +33,6 @@ export default defineConfig({
       ]
     }
   },
-  site: 'https://alqattandev.github.io/myblog', // GitHub Pages URL
-  base: '/myblog' // Repository name for GitHub Pages subdirectory
+  site: 'https://alialqattan.dev', // Custom domain URL
+  base: '/' // Root path for custom domain
 });

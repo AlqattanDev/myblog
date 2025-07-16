@@ -3900,5 +3900,557 @@
         "totalLines": 89
       }
     }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "git add -A && git commit -m \"$(cat <<'EOF'\nTransform homepage into professional portfolio with integrated blog\n\n- Redesigned homepage as comprehensive portfolio with Hero, About, Skills, Projects, and Contact sections\n- Created dedicated /blog page for all blog posts\n- Updated navigation to support portfolio structure (Home, Blog, About, Contact)\n- Added portfolio-specific styling with enhanced theme components\n- Integrated recent blog posts into portfolio homepage\n- Enhanced theme system with portfolio-specific CSS animations and effects\n- Maintained existing blog functionality while providing better UX structure\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\"",
+      "description": "Commit the portfolio transformation"
+    },
+    "tool_response": {
+      "stdout": "[main 8524712] Transform homepage into professional portfolio with integrated blog\n Committer: Ali AlQattan <alialqattan@black.local>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly:\n\n    git config --global user.name \"Your Name\"\n    git config --global user.email you@example.com\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 9 files changed, 14128 insertions(+), 57 deletions(-)\n create mode 100644 src/pages/blog.astro",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "git push origin main",
+      "description": "Deploy the portfolio transformation to GitHub Pages"
+    },
+    "tool_response": {
+      "stdout": "To https://github.com/AlqattanDev/myblog.git\n   2b241a7..8524712  main -> main",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "sleep 90",
+      "description": "Wait for GitHub Actions deployment to complete"
+    },
+    "tool_response": {
+      "stdout": "",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "curl -s -o /dev/null -w \"%{http_code}\" https://alqattandev.github.io/myblog/",
+      "description": "Check if the deployed portfolio is accessible"
+    },
+    "tool_response": {
+      "stdout": "200",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "completed",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "completed",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "completed",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "completed",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "completed",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "in_progress",
+          "priority": "low",
+          "id": "6"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "completed",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "completed",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "completed",
+          "priority": "low",
+          "id": "6"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Configure GitHub Pages custom domain settings",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Update CNAME file in repository",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update BASE_URL in astro.config.mjs",
+          "status": "pending",
+          "priority": "high",
+          "id": "3"
+        },
+        {
+          "content": "Test domain configuration and deployment",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Analyze current homepage structure and design portfolio layout",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Create portfolio sections (Hero, About, Projects, Skills, Contact)",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Integrate blog as a section/page within the portfolio",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        },
+        {
+          "content": "Update navigation to support portfolio structure",
+          "status": "completed",
+          "priority": "medium",
+          "id": "4"
+        },
+        {
+          "content": "Add portfolio-specific components and styling",
+          "status": "completed",
+          "priority": "medium",
+          "id": "5"
+        },
+        {
+          "content": "Test and deploy the portfolio transformation",
+          "status": "completed",
+          "priority": "low",
+          "id": "6"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Configure GitHub Pages custom domain settings",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Update CNAME file in repository",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update BASE_URL in astro.config.mjs",
+          "status": "pending",
+          "priority": "high",
+          "id": "3"
+        },
+        {
+          "content": "Test domain configuration and deployment",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Write",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/public/CNAME",
+      "content": "alialqattan.dev"
+    },
+    "tool_response": {
+      "type": "create",
+      "filePath": "/Users/alialqattan/Projects/myblog/public/CNAME",
+      "content": "alialqattan.dev",
+      "structuredPatch": []
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Configure GitHub Pages custom domain settings",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Update CNAME file in repository",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update BASE_URL in astro.config.mjs",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "3"
+        },
+        {
+          "content": "Test domain configuration and deployment",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Configure GitHub Pages custom domain settings",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Update CNAME file in repository",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update BASE_URL in astro.config.mjs",
+          "status": "pending",
+          "priority": "high",
+          "id": "3"
+        },
+        {
+          "content": "Test domain configuration and deployment",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Configure GitHub Pages custom domain settings",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Update CNAME file in repository",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update BASE_URL in astro.config.mjs",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "3"
+        },
+        {
+          "content": "Test domain configuration and deployment",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/astro.config.mjs"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/alialqattan/Projects/myblog/astro.config.mjs",
+        "content": "// @ts-check\nimport { defineConfig } from 'astro/config';\nimport tailwind from '@astrojs/tailwind';\nimport mdx from '@astrojs/mdx';\n\n// https://astro.build/config\nexport default defineConfig({\n  integrations: [\n    tailwind(),\n    mdx()\n  ],\n  markdown: {\n    shikiConfig: {\n      themes: {\n        light: 'github-light',\n        dark: 'github-dark-default'\n      },\n      defaultColor: false,\n      cssVariablePrefix: '--shiki-',\n      wrap: true,\n      langs: [\n        'javascript',\n        'typescript',\n        'python',\n        'bash',\n        'json',\n        'html',\n        'css',\n        'sql',\n        'yaml',\n        'markdown',\n        'mermaid'\n      ]\n    }\n  },\n  site: 'https://alqattandev.github.io/myblog', // GitHub Pages URL\n  base: '/myblog' // Repository name for GitHub Pages subdirectory\n});\n",
+        "numLines": 39,
+        "startLine": 1,
+        "totalLines": 39
+      }
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/astro.config.mjs",
+      "old_string": "  site: 'https://alqattandev.github.io/myblog', // GitHub Pages URL\n  base: '/myblog' // Repository name for GitHub Pages subdirectory",
+      "new_string": "  site: 'https://alialqattan.dev', // Custom domain URL\n  base: '/' // Root path for custom domain"
+    },
+    "tool_response": {
+      "filePath": "/Users/alialqattan/Projects/myblog/astro.config.mjs",
+      "oldString": "  site: 'https://alqattandev.github.io/myblog', // GitHub Pages URL\n  base: '/myblog' // Repository name for GitHub Pages subdirectory",
+      "newString": "  site: 'https://alialqattan.dev', // Custom domain URL\n  base: '/' // Root path for custom domain",
+      "originalFile": "// @ts-check\nimport { defineConfig } from 'astro/config';\nimport tailwind from '@astrojs/tailwind';\nimport mdx from '@astrojs/mdx';\n\n// https://astro.build/config\nexport default defineConfig({\n  integrations: [\n    tailwind(),\n    mdx()\n  ],\n  markdown: {\n    shikiConfig: {\n      themes: {\n        light: 'github-light',\n        dark: 'github-dark-default'\n      },\n      defaultColor: false,\n      cssVariablePrefix: '--shiki-',\n      wrap: true,\n      langs: [\n        'javascript',\n        'typescript',\n        'python',\n        'bash',\n        'json',\n        'html',\n        'css',\n        'sql',\n        'yaml',\n        'markdown',\n        'mermaid'\n      ]\n    }\n  },\n  site: 'https://alqattandev.github.io/myblog', // GitHub Pages URL\n  base: '/myblog' // Repository name for GitHub Pages subdirectory\n});\n",
+      "structuredPatch": [
+        {
+          "oldStart": 33,
+          "oldLines": 6,
+          "newStart": 33,
+          "newLines": 6,
+          "lines": [
+            "       ]",
+            "     }",
+            "   },",
+            "-  site: 'https://alqattandev.github.io/myblog', // GitHub Pages URL",
+            "-  base: '/myblog' // Repository name for GitHub Pages subdirectory",
+            "+  site: 'https://alialqattan.dev', // Custom domain URL",
+            "+  base: '/' // Root path for custom domain",
+            " });"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Configure GitHub Pages custom domain settings",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Update CNAME file in repository",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update BASE_URL in astro.config.mjs",
+          "status": "completed",
+          "priority": "high",
+          "id": "3"
+        },
+        {
+          "content": "Test domain configuration and deployment",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "4"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Configure GitHub Pages custom domain settings",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Update CNAME file in repository",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update BASE_URL in astro.config.mjs",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "3"
+        },
+        {
+          "content": "Test domain configuration and deployment",
+          "status": "pending",
+          "priority": "medium",
+          "id": "4"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Configure GitHub Pages custom domain settings",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Update CNAME file in repository",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update BASE_URL in astro.config.mjs",
+          "status": "completed",
+          "priority": "high",
+          "id": "3"
+        },
+        {
+          "content": "Test domain configuration and deployment",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "4"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "yarn build",
+      "description": "Build the site with new domain configuration"
+    },
+    "tool_response": {
+      "stdout": "yarn run v1.22.22\n$ astro build\n21:00:58 [content] Syncing content\n21:00:58 [content] Astro config changed\n21:00:58 [content] Clearing content store\n21:00:59 [content] Synced content\n21:00:59 [types] Generated 310ms\n21:00:59 [build] output: \"static\"\n21:00:59 [build] mode: \"static\"\n21:00:59 [build] directory: /Users/alialqattan/Projects/myblog/dist/\n21:00:59 [build] Collecting build info...\n21:00:59 [build] \u2713 Completed in 334ms.\n21:00:59 [build] Building static entrypoints...\n21:00:59 [vite] \u2713 built in 433ms\n21:00:59 [build] \u2713 Completed in 446ms.\n\n building client (vite) \n21:00:59 [vite] transforming...\n21:01:01 [vite] \u2713 1733 modules transformed.\n21:01:01 [vite] rendering chunks...\n21:01:01 [vite] computing gzip size...\n21:01:01 [vite] dist/_astro/clone.itS8r_ch.js                                                0.10 kB \u2502 gzip:   0.11 kB\n21:01:01 [vite] dist/_astro/init.Gi6I4Gst.js                                                 0.15 kB \u2502 gzip:   0.13 kB\n21:01:01 [vite] dist/_astro/channel.G1_idvA4.js                                              0.15 kB \u2502 gzip:   0.15 kB\n21:01:01 [vite] dist/_astro/chunk-AACKK3MU.C2wPMzLN.js                                       0.23 kB \u2502 gzip:   0.19 kB\n21:01:01 [vite] dist/_astro/chunk-353BL4L5.DbPU5IVK.js                                       0.26 kB \u2502 gzip:   0.20 kB\n21:01:01 [vite] dist/_astro/chunk-BFAMUDN2.82Izt81Q.js                                       0.27 kB \u2502 gzip:   0.23 kB\n21:01:01 [vite] dist/_astro/stateDiagram-v2-GD6S3NHB.Bvj1mtYh.js                             0.40 kB \u2502 gzip:   0.30 kB\n21:01:01 [vite] dist/_astro/chunk-E2GYISFI.Bhs9fgi2.js                                       0.40 kB \u2502 gzip:   0.30 kB\n21:01:01 [vite] dist/_astro/classDiagram-BGRH5UQR.PMjCR4RZ.js                                0.44 kB \u2502 gzip:   0.31 kB\n21:01:01 [vite] dist/_astro/classDiagram-v2-O24JOBDK.PMjCR4RZ.js                             0.44 kB \u2502 gzip:   0.31 kB\n21:01:01 [vite] dist/_astro/chunk-SKB7J2MH.CEnd-r_u.js                                       0.54 kB \u2502 gzip:   0.38 kB\n21:01:01 [vite] dist/_astro/infoDiagram-XT3IWWJI.BkZok70k.js                                 0.70 kB \u2502 gzip:   0.46 kB\n21:01:01 [vite] dist/_astro/ordinal.BYWQX77i.js                                              1.19 kB \u2502 gzip:   0.57 kB\n21:01:01 [vite] dist/_astro/chunk-67H74DCK.r-Ui3yWd.js                                       1.47 kB \u2502 gzip:   0.66 kB\n21:01:01 [vite] dist/_astro/_basePickBy.BdGuPbwx.js                                          2.62 kB \u2502 gzip:   1.32 kB\n21:01:01 [vite] dist/_astro/arc.CPr9yU51.js                                                  3.48 kB \u2502 gzip:   1.49 kB\n21:01:01 [vite] dist/_astro/diagram-5UYTHUR4.FAAr6zht.js                                     4.09 kB \u2502 gzip:   1.78 kB\n21:01:01 [vite] dist/_astro/defaultLocale.C4B-KCzX.js                                        4.55 kB \u2502 gzip:   2.11 kB\n21:01:01 [vite] dist/_astro/pieDiagram-NIOCPIFQ.CX5wiOUM.js                                  4.96 kB \u2502 gzip:   2.22 kB\n21:01:01 [vite] dist/_astro/linear.BsvBF-Em.js                                               5.70 kB \u2502 gzip:   2.34 kB\n21:01:01 [vite] dist/_astro/diagram-ZTM2IBQH.BdOIpN-8.js                                     5.92 kB \u2502 gzip:   2.49 kB\n21:01:01 [vite] dist/_astro/graph.DyCKSqZx.js                                                5.96 kB \u2502 gzip:   1.90 kB\n21:01:01 [vite] dist/_astro/stateDiagram-XX37X6EN.DQsyinet.js                               10.40 kB \u2502 gzip:   3.65 kB\n21:01:01 [vite] dist/_astro/dagre-FFZHY6LT.CM3ZrgWa.js                                      11.01 kB \u2502 gzip:   4.11 kB\n21:01:01 [vite] dist/_astro/_baseUniq.BZfoGAar.js                                           11.93 kB \u2502 gzip:   4.65 kB\n21:01:01 [vite] dist/_astro/diagram-3EMPZRKU._k8X14Pe.js                                    15.76 kB \u2502 gzip:   5.66 kB\n21:01:01 [vite] dist/_astro/kanban-definition-ILFWEQ3N.Bk6W5hPz.js                          20.20 kB \u2502 gzip:   7.11 kB\n21:01:01 [vite] dist/_astro/sankeyDiagram-4UZDY2LN.D7t1cX-4.js                              22.07 kB \u2502 gzip:   8.09 kB\n21:01:01 [vite] dist/_astro/journeyDiagram-EWQZEKCU.Bwu6qAWv.js                             23.56 kB \u2502 gzip:   8.29 kB\n21:01:01 [vite] dist/_astro/timeline-definition-RI47OAVP.BpeYuWy6.js                        23.59 kB \u2502 gzip:   8.20 kB\n21:01:01 [vite] dist/_astro/gitGraphDiagram-GW3U2K7C.CA6ae_jm.js                            24.14 kB \u2502 gzip:   7.43 kB\n21:01:01 [vite] dist/_astro/erDiagram-R3QVA2FD.sxT20uDY.js                                  25.24 kB \u2502 gzip:   8.75 kB\n21:01:01 [vite] dist/_astro/layout.D1Xvw9DD.js                                              27.24 kB \u2502 gzip:   9.70 kB\n21:01:01 [vite] dist/_astro/requirementDiagram-SO3GGRV7.CUyczslS.js                         30.09 kB \u2502 gzip:   9.32 kB\n21:01:01 [vite] dist/_astro/quadrantDiagram-2OG54O6I.DA51dTLV.js                            33.84 kB \u2502 gzip:   9.84 kB\n21:01:01 [vite] dist/_astro/chunk-6OLS64BW.CxmU5P1w.js                                      36.38 kB \u2502 gzip:  11.72 kB\n21:01:01 [vite] dist/_astro/xychartDiagram-H2YORKM3.CWVKhYJH.js                             40.14 kB \u2502 gzip:  11.25 kB\n21:01:01 [vite] dist/_astro/chunk-QEP2MXWD.iRQMBid2.js                                      45.17 kB \u2502 gzip:  14.48 kB\n21:01:01 [vite] dist/_astro/flowDiagram-PKI6S5ZS.M-ckIYrW.js                                60.40 kB \u2502 gzip:  19.14 kB\n21:01:01 [vite] dist/_astro/ganttDiagram-EK5VF46D.DKYY8OP7.js                               62.63 kB \u2502 gzip:  21.01 kB\n21:01:01 [vite] dist/_astro/c4Diagram-6F6E4RAY.C0wdiUMz.js                                  70.14 kB \u2502 gzip:  19.52 kB\n21:01:01 [vite] dist/_astro/blockDiagram-PHRCVELO.Is8V3i1v.js                               71.55 kB \u2502 gzip:  20.26 kB\n21:01:01 [vite] dist/_astro/sequenceDiagram-ZIKVLSP4.BDonWOum.js                            88.34 kB \u2502 gzip:  25.06 kB\n21:01:01 [vite] dist/_astro/mindmap-definition-CZNETY7S.DOrSkKjL.js                        100.93 kB \u2502 gzip:  28.37 kB\n21:01:01 [vite] dist/_astro/architectureDiagram-NQ2NVSRB.D2SLKcHt.js                       148.21 kB \u2502 gzip:  41.65 kB\n21:01:01 [vite] dist/_astro/katex.DsmCZfJr.js                                              265.43 kB \u2502 gzip:  77.34 kB\n21:01:01 [vite] dist/_astro/treemap-6Y5VK53G.Dap05yTf.js                                   329.21 kB \u2502 gzip:  80.17 kB\n21:01:01 [vite] dist/_astro/cytoscape.esm.lc5uY2iF.js                                      439.73 kB \u2502 gzip: 140.32 kB\n21:01:01 [vite] dist/_astro/MermaidTheme.astro_astro_type_script_index_0_lang.ByavqXF2.js  484.52 kB \u2502 gzip: 135.80 kB\n21:01:01 [vite] \u2713 built in 2.15s\n\n generating static routes \n21:01:01 \u25b6 src/pages/blog.astro\n21:01:01   \u2514\u2500 /blog/index.htmlFetching posts from AlqattanDev/blog-content\nFound 5 markdown files\nContent sources: { local: true, github: true }\nLoaded 7 posts\n (+1.04s) \n21:01:02 \u25b6 src/pages/index.astro\n21:01:02   \u2514\u2500 /index.htmlFetching posts from AlqattanDev/blog-content\nFound 5 markdown files\nContent sources: { local: true, github: true }\nLoaded 7 posts\n (+774ms) \n21:01:03 \u25b6 src/pages/[...slug].astro\n21:01:03   \u251c\u2500 /astro-content-collections/index.html (+1ms) \n21:01:03   \u2514\u2500 /welcome-to-my-blog/index.html (+1ms) \n21:01:03 \u2713 Completed in 1.85s.\n\n21:01:03 [build] 4 page(s) built in 4.79s\n21:01:03 [build] Complete!\nDone in 6.01s.\nwarning package.json: No license field\nwarning ../../package.json: No license field",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
   }
 ]
