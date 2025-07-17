@@ -12,9 +12,9 @@ const contentSources = contentManager.getContentSources();
 console.log('Content sources:', contentSources);
 console.log(`Loaded ${allPosts.length} posts`);
 
-// Filter posts that can be rendered (local content collections only for now)
-const renderablePosts = allPosts.filter((post) => 'render' in post && typeof post.render === 'function');
-const githubOnlyPosts = allPosts.filter((post) => !('render' in post && typeof post.render === 'function'));
+// Show all posts (both local and GitHub)
+const renderablePosts = allPosts;
+const githubOnlyPosts = [];
 ---
 
 <BaseLayout 

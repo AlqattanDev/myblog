@@ -1,26 +1,44 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../layouts/BlogPost.astro';
+import MarkdownContent from '../components/MarkdownContent.astro';
+import { ContentManager, type BlogPost as BlogPostType } from '../utils/content-manager.js';
+import { marked } from 'marked';
 
 export async function getStaticPaths() {
-  // For now, only use local content collections for static generation
-  // GitHub content integration will be used for dynamic content in the future
-  const posts = await getCollection('blog', ({ data }) => {
-    return !data.draft; // Only published posts
-  });
+  // Use ContentManager to get all posts (local + GitHub)
+  const contentManager = new ContentManager();
+  const allPosts = await contentManager.getAllPosts();
 
-  return posts.map((post) => ({
+  return allPosts.map((post) => ({
     params: { slug: post.slug },
     props: post,
   }));
 }
 
-type Props = CollectionEntry<'blog'>;
+type Props = BlogPostType;
 
 const post = Astro.props;
-const { Content } = await post.render();
+
+// Check if this is a GitHub post (it will have body property and no actual render function)
+const isGitHubPost = 'body' in post;
+let Content: any;
+let renderedContent: string = '';
+
+if (isGitHubPost) {
+  // For GitHub posts, render the markdown body directly
+  renderedContent = await marked(post.body);
+  Content = MarkdownContent;
+} else {
+  // For local posts, use the normal render function
+  const rendered = await post.render();
+  Content = rendered.Content;
+}
 ---
 
 <BlogPost post={post}>
-  <Content />
+  {isGitHubPost ? (
+    <Content html={renderedContent} />
+  ) : (
+    <Content />
+  )}
 </BlogPost>

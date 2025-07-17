@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { GitHubContentFetcher, type GitHubPost } from './github-content.js';
+import { marked } from 'marked';
 
 export type BlogPost = CollectionEntry<'blog'> | {
   id: string;
@@ -156,11 +157,8 @@ export class ContentManager {
         author: githubPost.data.author || 'Ali Alqattan',
       },
       render: async () => {
-        // For GitHub posts, we'll need to render the markdown content
-        // This is a simplified implementation - in production, you might want to use a proper markdown renderer
-        return {
-          Content: () => null, // This would need proper markdown rendering
-        };
+        // GitHub posts will be handled differently in pages
+        throw new Error('GitHub posts should not use render() - use body content directly');
       },
     };
   }
