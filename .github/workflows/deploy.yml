@@ -79,7 +79,7 @@ jobs:
         if: always()
         run: |
           # Extract build statistics from logs
-          GITHUB_POSTS=$(grep -o "Found [0-9]* markdown files" build.log | grep -o "[0-9]*" || echo "0")
+          GITHUB_POSTS=$(grep -o "Found [0-9]* markdown files" build.log | grep -o "[0-9]*" | head -1 || echo "0")
           RATE_LIMIT_INFO=$(grep -o "Rate limit status: [0-9]*\/[0-9]*" build.log | tail -1 || echo "Rate limit status: 0/4500")
           
           echo "GITHUB_POSTS=$GITHUB_POSTS" >> $GITHUB_OUTPUT
@@ -87,7 +87,7 @@ jobs:
           
           echo "📊 Build Analysis:"
           echo "  - GitHub posts fetched: $GITHUB_POSTS"
-          echo "  - $RATE_LIMIT_INFO requests used"
+          echo "  - Rate limit info: $RATE_LIMIT_INFO"
 
       - name: Set build status
         id: build-status
