@@ -156,8 +156,8 @@ jobs:
           
           # Build status
           if [ "${{ needs.build.outputs.build-status }}" == "success" ]; then
-            echo "✅ **Build**: Successful (${needs.build.outputs.build-duration}s)" >> $GITHUB_STEP_SUMMARY
-            echo "📁 **Content**: ${needs.build.outputs.content-fetched} posts fetched from GitHub" >> $GITHUB_STEP_SUMMARY
+            echo "✅ **Build**: Successful (${{ needs.build.outputs.build-duration }}s)" >> $GITHUB_STEP_SUMMARY
+            echo "📁 **Content**: ${{ needs.build.outputs.content-fetched }} posts fetched from GitHub" >> $GITHUB_STEP_SUMMARY
           else
             echo "❌ **Build**: Failed" >> $GITHUB_STEP_SUMMARY
           fi
@@ -189,7 +189,7 @@ jobs:
             
             if (buildSuccess && deploySuccess) {
               state = 'success';
-              description = `✅ Blog deployed successfully (${${{ needs.build.outputs.content-fetched }}} posts)`;
+              description = `✅ Blog deployed successfully (${{ needs.build.outputs.content-fetched }} posts)`;
             } else if (!buildSuccess) {
               state = 'failure';
               description = '❌ Build failed - check logs for details';
@@ -219,7 +219,7 @@ jobs:
             
             if (buildSuccess && deploySuccess) {
               message += '✅ **Status**: Successfully deployed!\n';
-              message += `📁 **Content**: ${${{ needs.build.outputs.content-fetched }}} posts fetched\n`;
+              message += `📁 **Content**: ${{ needs.build.outputs.content-fetched }} posts fetched\n`;
               message += `⏱️ **Build time**: ${{ needs.build.outputs.build-duration }}s\n`;
               message += `🌐 **Preview**: [${{ needs.deploy.outputs.deployment-url }}](${{ needs.deploy.outputs.deployment-url }})\n`;
             } else if (!buildSuccess) {
