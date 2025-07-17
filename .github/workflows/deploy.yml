@@ -27,6 +27,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      build-status: ${{ steps.build-status.outputs.status }}
+      build-duration: ${{ steps.build-status.outputs.duration }}
+      content-fetched: ${{ steps.build-status.outputs.content-fetched }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,13 +48,70 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build with Astro
+        id: astro-build
         env:
           GITHUB_TOKEN: ${{ secrets.CONTENT_GITHUB_TOKEN }}
           CONTENT_REPO_OWNER: ${{ secrets.CONTENT_REPO_OWNER }}
           CONTENT_REPO_NAME: ${{ secrets.CONTENT_REPO_NAME }}
-        run: yarn build
+        run: |
+          echo "🚀 Starting build at $(date)"
+          BUILD_START=$(date +%s)
+          
+          # Run the build and capture output
+          yarn build 2>&1 | tee build.log
+          BUILD_EXIT_CODE=${PIPESTATUS[0]}
+          
+          BUILD_END=$(date +%s)
+          BUILD_DURATION=$((BUILD_END - BUILD_START))
+          
+          echo "BUILD_DURATION=$BUILD_DURATION" >> $GITHUB_OUTPUT
+          echo "BUILD_EXIT_CODE=$BUILD_EXIT_CODE" >> $GITHUB_OUTPUT
+          
+          if [ $BUILD_EXIT_CODE -eq 0 ]; then
+            echo "✅ Build completed successfully in ${BUILD_DURATION}s"
+          else
+            echo "❌ Build failed with exit code $BUILD_EXIT_CODE"
+            exit $BUILD_EXIT_CODE
+          fi
+
+      - name: Analyze build output
+        id: build-analysis
+        if: always()
+        run: |
+          # Extract build statistics from logs
+          GITHUB_POSTS=$(grep -o "Found [0-9]* markdown files" build.log | grep -o "[0-9]*" || echo "0")
+          RATE_LIMIT_INFO=$(grep -o "Rate limit status: [0-9]*\/[0-9]*" build.log | tail -1 || echo "Rate limit status: 0/4500")
+          
+          echo "GITHUB_POSTS=$GITHUB_POSTS" >> $GITHUB_OUTPUT
+          echo "RATE_LIMIT_INFO=$RATE_LIMIT_INFO" >> $GITHUB_OUTPUT
+          
+          echo "📊 Build Analysis:"
+          echo "  - GitHub posts fetched: $GITHUB_POSTS"
+          echo "  - $RATE_LIMIT_INFO requests used"
+
+      - name: Set build status
+        id: build-status
+        if: always()
+        run: |
+          if [ "${{ steps.astro-build.outcome }}" == "success" ]; then
+            echo "status=success" >> $GITHUB_OUTPUT
+            echo "content-fetched=${{ steps.build-analysis.outputs.GITHUB_POSTS }}" >> $GITHUB_OUTPUT
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+            echo "content-fetched=0" >> $GITHUB_OUTPUT
+          fi
+          echo "duration=${{ steps.astro-build.outputs.BUILD_DURATION }}" >> $GITHUB_OUTPUT
+
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: build.log
+          retention-days: 30
 
       - name: Upload artifact
+        if: success()
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -61,7 +122,117 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    if: needs.build.outputs.build-status == 'success'
+    outputs:
+      deployment-url: ${{ steps.deployment.outputs.page_url }}
+      deploy-status: ${{ steps.deploy-status.outputs.status }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Set deployment status
+        id: deploy-status
+        if: always()
+        run: |
+          if [ "${{ steps.deployment.outcome }}" == "success" ]; then
+            echo "status=success" >> $GITHUB_OUTPUT
+            echo "✅ Deployment completed successfully"
+            echo "🌐 Site URL: ${{ steps.deployment.outputs.page_url }}"
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+            echo "❌ Deployment failed"
+          fi
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: [build, deploy]
+    if: always()
+    steps:
+      - name: Create deployment summary
+        run: |
+          echo "## 📊 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Build status
+          if [ "${{ needs.build.outputs.build-status }}" == "success" ]; then
+            echo "✅ **Build**: Successful (${needs.build.outputs.build-duration}s)" >> $GITHUB_STEP_SUMMARY
+            echo "📁 **Content**: ${needs.build.outputs.content-fetched} posts fetched from GitHub" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Build**: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Deploy status
+          if [ "${{ needs.deploy.result }}" == "success" ]; then
+            echo "✅ **Deploy**: Successful" >> $GITHUB_STEP_SUMMARY
+            echo "🌐 **URL**: [${{ needs.deploy.outputs.deployment-url }}](${{ needs.deploy.outputs.deployment-url }})" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ needs.deploy.result }}" == "skipped" ]; then
+            echo "⏭️ **Deploy**: Skipped (build failed)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Deploy**: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Triggered by**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Create commit status
+        uses: actions/github-script@v7
+        if: github.event_name == 'push'
+        with:
+          script: |
+            const buildSuccess = '${{ needs.build.outputs.build-status }}' === 'success';
+            const deploySuccess = '${{ needs.deploy.result }}' === 'success';
+            
+            let state, description;
+            
+            if (buildSuccess && deploySuccess) {
+              state = 'success';
+              description = `✅ Blog deployed successfully (${${{ needs.build.outputs.content-fetched }}} posts)`;
+            } else if (!buildSuccess) {
+              state = 'failure';
+              description = '❌ Build failed - check logs for details';
+            } else {
+              state = 'failure';
+              description = '❌ Deployment failed - site may be unavailable';
+            }
+            
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: state,
+              description: description,
+              context: 'Blog Deployment'
+            });
+
+      - name: Comment on PR (if applicable)
+        uses: actions/github-script@v7
+        if: github.event_name == 'pull_request'
+        with:
+          script: |
+            const buildSuccess = '${{ needs.build.outputs.build-status }}' === 'success';
+            const deploySuccess = '${{ needs.deploy.result }}' === 'success';
+            
+            let message = '## 🤖 Blog Deployment Report\n\n';
+            
+            if (buildSuccess && deploySuccess) {
+              message += '✅ **Status**: Successfully deployed!\n';
+              message += `📁 **Content**: ${${{ needs.build.outputs.content-fetched }}} posts fetched\n`;
+              message += `⏱️ **Build time**: ${{ needs.build.outputs.build-duration }}s\n`;
+              message += `🌐 **Preview**: [${{ needs.deploy.outputs.deployment-url }}](${{ needs.deploy.outputs.deployment-url }})\n`;
+            } else if (!buildSuccess) {
+              message += '❌ **Status**: Build failed\n';
+              message += '📋 Check the build logs for details.\n';
+            } else {
+              message += '❌ **Status**: Deployment failed\n';
+              message += '📋 Build succeeded but deployment failed.\n';
+            }
+            
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });

@@ -16,6 +16,7 @@
 
 import { Octokit } from '@octokit/rest';
 import { config } from 'dotenv';
+import { randomBytes } from 'crypto';
 
 // Load environment variables
 config();
@@ -49,6 +50,15 @@ async function setupWebhook() {
     const blogOwner = process.env.BLOG_REPO_OWNER;
     const blogRepo = process.env.BLOG_REPO_NAME;
 
+    // Generate secure webhook secret if not provided
+    let webhookSecret = process.env.WEBHOOK_SECRET;
+    if (!webhookSecret) {
+      webhookSecret = randomBytes(32).toString('hex');
+      console.log('🔑 Generated secure webhook secret (save this!):');
+      console.log(`   WEBHOOK_SECRET=${webhookSecret}`);
+      console.log('');
+    }
+
     // Create webhook in content repository
     const webhook = await octokit.rest.repos.createWebhook({
       owner: contentOwner,
@@ -57,7 +67,7 @@ async function setupWebhook() {
       config: {
         url: `https://api.github.com/repos/${blogOwner}/${blogRepo}/dispatches`,
         content_type: 'json',
-        secret: process.env.WEBHOOK_SECRET || 'default-secret-change-me',
+        secret: webhookSecret,
       },
       events: ['push', 'pull_request'],
       active: true,
@@ -72,8 +82,12 @@ async function setupWebhook() {
     console.log(`   - CONTENT_GITHUB_TOKEN: Your GitHub personal access token`);
     console.log(`   - CONTENT_REPO_OWNER: ${contentOwner}`);
     console.log(`   - CONTENT_REPO_NAME: ${contentRepo}`);
-    console.log('2. Push content to your content repository to trigger a build');
-    console.log('3. Your blog will automatically rebuild when content changes!');
+    if (!process.env.WEBHOOK_SECRET) {
+      console.log(`   - WEBHOOK_SECRET: ${webhookSecret} (generated above)`);
+    }
+    console.log('2. Store the webhook secret securely (required for webhook verification)');
+    console.log('3. Push content to your content repository to trigger a build');
+    console.log('4. Your blog will automatically rebuild when content changes!');
 
   } catch (error) {
     console.error('❌ Error setting up webhook:', error.message);

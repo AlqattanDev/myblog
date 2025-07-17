@@ -29,10 +29,13 @@ export class ContentManager {
     if (GitHubContentFetcher.isConfigured()) {
       try {
         this.githubFetcher = new GitHubContentFetcher();
+        console.log('[ContentManager] ✅ GitHub integration enabled');
       } catch (error) {
-        console.warn('GitHub content fetcher initialization failed:', error);
+        console.warn('[ContentManager] ⚠️ GitHub content fetcher initialization failed:', error);
         this.githubFetcher = null;
       }
+    } else {
+      console.log('[ContentManager] ℹ️ GitHub integration disabled (missing environment variables)');
     }
   }
 
@@ -40,24 +43,45 @@ export class ContentManager {
    * Get all blog posts from both local content collections and GitHub
    */
   async getAllPosts(): Promise<BlogPost[]> {
+    console.log('[ContentManager] 🚀 Starting content aggregation...');
+    
     const localPosts = await this.getLocalPosts();
     const githubPosts = await this.getGitHubPosts();
+
+    console.log(`[ContentManager] 📁 Found ${localPosts.length} local posts`);
+    console.log(`[ContentManager] 📡 Found ${githubPosts.length} GitHub posts`);
 
     // Combine and deduplicate posts (local takes precedence)
     const allPosts = [...localPosts];
     const localSlugs = new Set(localPosts.map(post => post.slug));
 
+    let addedGitHubPosts = 0;
+    let skippedGitHubPosts = 0;
+
     // Add GitHub posts that don't exist locally
     for (const githubPost of githubPosts) {
       if (!localSlugs.has(githubPost.slug)) {
         allPosts.push(this.convertGitHubPost(githubPost));
+        addedGitHubPosts++;
+      } else {
+        skippedGitHubPosts++;
       }
     }
 
+    console.log(`[ContentManager] 🔄 Content merge: ${addedGitHubPosts} GitHub posts added, ${skippedGitHubPosts} skipped (local override)`);
+
     // Sort by date (newest first) and filter out drafts
-    return allPosts
-      .filter(post => !post.data.draft)
-      .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+    const publishedPosts = allPosts.filter(post => !post.data.draft);
+    const draftCount = allPosts.length - publishedPosts.length;
+    
+    console.log(`[ContentManager] 📝 Filtered ${draftCount} draft posts, ${publishedPosts.length} published posts remaining`);
+
+    const sortedPosts = publishedPosts.sort((a, b) => 
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+    );
+
+    console.log(`[ContentManager] ✅ Content aggregation complete: returning ${sortedPosts.length} posts`);
+    return sortedPosts;
   }
 
   /**
@@ -109,13 +133,17 @@ export class ContentManager {
    */
   private async getGitHubPosts(): Promise<GitHubPost[]> {
     if (!this.githubFetcher) {
+      console.log('[ContentManager] ℹ️ GitHub fetcher not available, skipping GitHub posts');
       return [];
     }
 
     try {
-      return await this.githubFetcher.fetchAllPosts();
+      console.log('[ContentManager] 📡 Fetching posts from GitHub...');
+      const posts = await this.githubFetcher.fetchAllPosts();
+      console.log(`[ContentManager] ✅ Successfully fetched ${posts.length} posts from GitHub`);
+      return posts;
     } catch (error) {
-      console.warn('Error fetching GitHub posts:', error);
+      console.warn('[ContentManager] ⚠️ Error fetching GitHub posts:', error);
       return [];
     }
   }
