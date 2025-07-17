@@ -142,5 +142,11 @@
     "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
     "hook_event_name": "Stop",
     "stop_hook_active": false
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
   }
 ]

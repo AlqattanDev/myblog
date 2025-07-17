@@ -5742,5 +5742,384 @@
       "content": "/Users/alialqattan/Projects/myblog/dist/index.html:</p> </div> <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\"> <article class=\"theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition\"> <div class=\"flex flex-col h-full\"> <!-- Hero Image -->  <!-- Post Header --> <div class=\"flex-1\"> <div class=\"mb-3\"> <h2 class=\"text-xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary theme-transition\"> <a href=\"/welcome-to-my-blog/\" class=\"block\"> Welcome to My Blog </a> </h2> <p class=\"mt-2 text-theme-text-secondary line-clamp-3\"> The first post on my new GitHub-synced blog built with Astro </p> </div> <!-- Tags --> <div class=\"mb-4 flex flex-wrap gap-2\"> <span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> welcome </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> astro </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> blog </span>  </div> </div> <!-- Post Footer --> <div class=\"flex items-center justify-between pt-4 border-t border-theme-border-muted\"> <time datetime=\"2025-07-16T00:00:00.000Z\" class=\"text-sm text-theme-text-tertiary\"> July 16, 2025 </time> <a href=\"/welcome-to-my-blog/\" class=\"inline-flex items-center text-sm font-medium theme-link\">\n/Users/alialqattan/Projects/myblog/dist/blog/index.html:</h2> <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\"> <article class=\"theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition\"> <div class=\"flex flex-col h-full\"> <!-- Hero Image -->  <!-- Post Header --> <div class=\"flex-1\"> <div class=\"mb-3\"> <h2 class=\"text-xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary theme-transition\"> <a href=\"/welcome-to-my-blog/\" class=\"block\"> Welcome to My Blog </a> </h2> <p class=\"mt-2 text-theme-text-secondary line-clamp-3\"> The first post on my new GitHub-synced blog built with Astro </p> </div> <!-- Tags --> <div class=\"mb-4 flex flex-wrap gap-2\"> <span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> welcome </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> astro </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> blog </span>  </div> </div> <!-- Post Footer --> <div class=\"flex items-center justify-between pt-4 border-t border-theme-border-muted\"> <time datetime=\"2025-07-16T00:00:00.000Z\" class=\"text-sm text-theme-text-tertiary\"> July 16, 2025 </time> <a href=\"/welcome-to-my-blog/\" class=\"inline-flex items-center text-sm font-medium theme-link\">",
       "numLines": 2
     }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "git add . && git commit -m \"Fix blog post navigation URLs\n\n- Remove duplicate slash in PostCard URL generation\n- Blog post links now correctly resolve to /slug/ instead of //slug/\n- Fixes navigation issues with custom domain\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\"",
+      "description": "Commit navigation URL fix"
+    },
+    "tool_response": {
+      "stdout": "[main d31a32f] Fix blog post navigation URLs\n Committer: Ali AlQattan <alialqattan@black.local>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly:\n\n    git config --global user.name \"Your Name\"\n    git config --global user.email you@example.com\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 6 files changed, 6155 insertions(+), 1 deletion(-)",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "git status",
+      "description": "Check git status for unstaged changes"
+    },
+    "tool_response": {
+      "stdout": "On branch main\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git restore <file>...\" to discard changes in working directory)\n\tmodified:   .claude/hooks/logs/auto-bookmark.log\n\tmodified:   logs/post_tool_use.json\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "git stash && git pull origin main --rebase && git stash pop",
+      "description": "Stash log changes, pull latest, and restore"
+    },
+    "tool_response": {
+      "stdout": "Saved working directory and index state WIP on main: d31a32f Fix blog post navigation URLs\nOn branch main\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git restore <file>...\" to discard changes in working directory)\n\tmodified:   .claude/hooks/logs/auto-bookmark.log\n\tmodified:   logs/post_tool_use.json\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\nDropped refs/stash@{0} (492fbeef4cb28d47db3d55d95d1132b101d24dce)\nFrom https://github.com/AlqattanDev/myblog\n * branch            main       -> FETCH_HEAD\n   0c52d1b..e653c0f  main       -> origin/main\nRebasing (1/1)\rSuccessfully rebased and updated refs/heads/main.",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "git push origin main",
+      "description": "Push navigation fix changes"
+    },
+    "tool_response": {
+      "stdout": "To https://github.com/AlqattanDev/myblog.git\n   e653c0f..9575892  main -> main",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Investigate navigation URL parsing issues",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Check blog post links and routing",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Fix navigation URL generation",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Investigate navigation URL parsing issues",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Check blog post links and routing",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Fix navigation URL generation",
+          "status": "in_progress",
+          "priority": "medium",
+          "id": "3"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Investigate navigation URL parsing issues",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Check blog post links and routing",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Fix navigation URL generation",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Fix blog post URLs to be absolute paths",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Test URL navigation after fix",
+          "status": "pending",
+          "priority": "medium",
+          "id": "2"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Investigate navigation URL parsing issues",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Check blog post links and routing",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Fix navigation URL generation",
+          "status": "completed",
+          "priority": "medium",
+          "id": "3"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Fix blog post URLs to be absolute paths",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Test URL navigation after fix",
+          "status": "pending",
+          "priority": "medium",
+          "id": "2"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/components/PostCard.astro",
+      "offset": 15,
+      "limit": 5
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/alialqattan/Projects/myblog/src/components/PostCard.astro",
+        "content": "}).format(date);\n\nconst postUrl = `${import.meta.env.BASE_URL}${post.slug}/`;\n---\n",
+        "numLines": 5,
+        "startLine": 15,
+        "totalLines": 82
+      }
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/astro.config.mjs"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/alialqattan/Projects/myblog/astro.config.mjs",
+        "content": "// @ts-check\nimport { defineConfig } from 'astro/config';\nimport tailwind from '@astrojs/tailwind';\nimport mdx from '@astrojs/mdx';\n\n// https://astro.build/config\nexport default defineConfig({\n  integrations: [\n    tailwind(),\n    mdx()\n  ],\n  markdown: {\n    shikiConfig: {\n      themes: {\n        light: 'github-light',\n        dark: 'github-dark-default'\n      },\n      defaultColor: false,\n      cssVariablePrefix: '--shiki-',\n      wrap: true,\n      langs: [\n        'javascript',\n        'typescript',\n        'python',\n        'bash',\n        'json',\n        'html',\n        'css',\n        'sql',\n        'yaml',\n        'markdown',\n        'mermaid'\n      ]\n    }\n  },\n  site: 'https://alialqattan.dev', // Custom domain URL\n  base: '/' // Root path for custom domain\n});\n",
+        "numLines": 39,
+        "startLine": 1,
+        "totalLines": 39
+      }
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Grep",
+    "tool_input": {
+      "pattern": "href=\"/welcome-to-my-blog/\"",
+      "path": "/Users/alialqattan/Projects/myblog/dist/index.html",
+      "output_mode": "content",
+      "-C": 2,
+      "-n": true
+    },
+    "tool_response": {
+      "mode": "content",
+      "numFiles": 0,
+      "filenames": [],
+      "content": "31-</p> <div class=\"flex flex-wrap gap-2 mb-4\"> <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">React</span> <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">Node.js</span> <span class=\"px-2 py-1 bg-theme-accent-primary/10 text-theme-accent-primary rounded text-xs\">AWS</span> </div> <div class=\"flex gap-4\"> <span class=\"text-theme-text-muted\">In Development</span> </div> </div> </div> </div> </section>  <section class=\"py-16 bg-theme-bg-secondary\" id=\"blog\"> <div class=\"mx-auto max-w-4xl px-4\"> <div class=\"text-center mb-12\"> <h2 class=\"text-3xl font-bold text-theme-text-primary mb-4\">Latest Blog Posts</h2> <p class=\"text-lg text-theme-text-secondary\">\n32-Sharing thoughts on software development and technology\n33:</p> </div> <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\"> <article class=\"theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition\"> <div class=\"flex flex-col h-full\"> <!-- Hero Image -->  <!-- Post Header --> <div class=\"flex-1\"> <div class=\"mb-3\"> <h2 class=\"text-xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary theme-transition\"> <a href=\"/welcome-to-my-blog/\" class=\"block\"> Welcome to My Blog </a> </h2> <p class=\"mt-2 text-theme-text-secondary line-clamp-3\"> The first post on my new GitHub-synced blog built with Astro </p> </div> <!-- Tags --> <div class=\"mb-4 flex flex-wrap gap-2\"> <span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> welcome </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> astro </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> blog </span>  </div> </div> <!-- Post Footer --> <div class=\"flex items-center justify-between pt-4 border-t border-theme-border-muted\"> <time datetime=\"2025-07-16T00:00:00.000Z\" class=\"text-sm text-theme-text-tertiary\"> July 16, 2025 </time> <a href=\"/welcome-to-my-blog/\" class=\"inline-flex items-center text-sm font-medium theme-link\">\n34-Read more\n35-<svg class=\"ml-1 h-4 w-4\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\"></path> </svg> </a> </div> </div> </article><article class=\"theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition\"> <div class=\"flex flex-col h-full\"> <!-- Hero Image -->  <!-- Post Header --> <div class=\"flex-1\"> <div class=\"mb-3\"> <h2 class=\"text-xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary theme-transition\"> <a href=\"/successful-deployment/\" class=\"block\"> \ud83c\udf89 Successful GitHub Pages Deployment! </a> </h2> <p class=\"mt-2 text-theme-text-secondary line-clamp-3\"> The GitHub-synced blog system is now live and automatically deploying content from the external repository </p> </div> <!-- Tags --> <div class=\"mb-4 flex flex-wrap gap-2\"> <span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> deployment </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> github-pages </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> success </span>  </div> </div> <!-- Post Footer --> <div class=\"flex items-center justify-between pt-4 border-t border-theme-border-muted\"> <time datetime=\"2025-07-16T00:00:00.000Z\" class=\"text-sm text-theme-text-tertiary\"> July 16, 2025 </time> <a href=\"/successful-deployment/\" class=\"inline-flex items-center text-sm font-medium theme-link\">",
+      "numLines": 5
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Grep",
+    "tool_input": {
+      "pattern": "<base",
+      "path": "/Users/alialqattan/Projects/myblog/dist",
+      "output_mode": "content"
+    },
+    "tool_response": {
+      "mode": "content",
+      "numFiles": 0,
+      "filenames": [],
+      "content": "",
+      "numLines": 0
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/components/PostCard.astro",
+      "old_string": "const postUrl = `${import.meta.env.BASE_URL}${post.slug}/`;",
+      "new_string": "const postUrl = `${import.meta.env.SITE}${post.slug}/`;"
+    },
+    "tool_response": {
+      "filePath": "/Users/alialqattan/Projects/myblog/src/components/PostCard.astro",
+      "oldString": "const postUrl = `${import.meta.env.BASE_URL}${post.slug}/`;",
+      "newString": "const postUrl = `${import.meta.env.SITE}${post.slug}/`;",
+      "originalFile": "---\nimport type { CollectionEntry } from 'astro:content';\n\nexport interface Props {\n  post: CollectionEntry<'blog'>;\n}\n\nconst { post } = Astro.props;\nconst { title, description, date, tags, heroImage } = post.data;\n\nconst formattedDate = new Intl.DateTimeFormat('en-US', {\n  year: 'numeric',\n  month: 'long',\n  day: 'numeric',\n}).format(date);\n\nconst postUrl = `${import.meta.env.BASE_URL}${post.slug}/`;\n---\n\n<article class=\"theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition\">\n  <div class=\"flex flex-col h-full\">\n    <!-- Hero Image -->\n    {heroImage && (\n      <div class=\"mb-4 -mx-6 -mt-6\">\n        <img\n          src={heroImage}\n          alt={title}\n          class=\"h-48 w-full rounded-t-lg object-cover\"\n        />\n      </div>\n    )}\n\n    <!-- Post Header -->\n    <div class=\"flex-1\">\n      <div class=\"mb-3\">\n        <h2 class=\"text-xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary theme-transition\">\n          <a href={postUrl} class=\"block\">\n            {title}\n          </a>\n        </h2>\n        <p class=\"mt-2 text-theme-text-secondary line-clamp-3\">\n          {description}\n        </p>\n      </div>\n\n      <!-- Tags -->\n      {tags && tags.length > 0 && (\n        <div class=\"mb-4 flex flex-wrap gap-2\">\n          {tags.slice(0, 3).map((tag) => (\n            <span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\">\n              {tag}\n            </span>\n          ))}\n          {tags.length > 3 && (\n            <span class=\"rounded-full bg-theme-bg-muted px-2 py-1 text-xs font-medium text-theme-text-muted\">\n              +{tags.length - 3} more\n            </span>\n          )}\n        </div>\n      )}\n    </div>\n\n    <!-- Post Footer -->\n    <div class=\"flex items-center justify-between pt-4 border-t border-theme-border-muted\">\n      <time \n        datetime={date.toISOString()}\n        class=\"text-sm text-theme-text-tertiary\"\n      >\n        {formattedDate}\n      </time>\n      <a \n        href={postUrl}\n        class=\"inline-flex items-center text-sm font-medium theme-link\"\n      >\n        Read more\n        <svg class=\"ml-1 h-4 w-4\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n        </svg>\n      </a>\n    </div>\n  </div>\n</article>",
+      "structuredPatch": [
+        {
+          "oldStart": 14,
+          "oldLines": 7,
+          "newStart": 14,
+          "newLines": 7,
+          "lines": [
+            "   day: 'numeric',",
+            " }).format(date);",
+            " ",
+            "-const postUrl = `${import.meta.env.BASE_URL}${post.slug}/`;",
+            "+const postUrl = `${import.meta.env.SITE}${post.slug}/`;",
+            " ---",
+            " ",
+            " <article class=\"theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition\">"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/alialqattan/Projects/myblog/src/components/PostCard.astro",
+      "old_string": "const postUrl = `${import.meta.env.SITE}${post.slug}/`;",
+      "new_string": "const postUrl = `/${post.slug}/`;"
+    },
+    "tool_response": {
+      "filePath": "/Users/alialqattan/Projects/myblog/src/components/PostCard.astro",
+      "oldString": "const postUrl = `${import.meta.env.SITE}${post.slug}/`;",
+      "newString": "const postUrl = `/${post.slug}/`;",
+      "originalFile": "---\nimport type { CollectionEntry } from 'astro:content';\n\nexport interface Props {\n  post: CollectionEntry<'blog'>;\n}\n\nconst { post } = Astro.props;\nconst { title, description, date, tags, heroImage } = post.data;\n\nconst formattedDate = new Intl.DateTimeFormat('en-US', {\n  year: 'numeric',\n  month: 'long',\n  day: 'numeric',\n}).format(date);\n\nconst postUrl = `${import.meta.env.SITE}${post.slug}/`;\n---\n\n<article class=\"theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition\">\n  <div class=\"flex flex-col h-full\">\n    <!-- Hero Image -->\n    {heroImage && (\n      <div class=\"mb-4 -mx-6 -mt-6\">\n        <img\n          src={heroImage}\n          alt={title}\n          class=\"h-48 w-full rounded-t-lg object-cover\"\n        />\n      </div>\n    )}\n\n    <!-- Post Header -->\n    <div class=\"flex-1\">\n      <div class=\"mb-3\">\n        <h2 class=\"text-xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary theme-transition\">\n          <a href={postUrl} class=\"block\">\n            {title}\n          </a>\n        </h2>\n        <p class=\"mt-2 text-theme-text-secondary line-clamp-3\">\n          {description}\n        </p>\n      </div>\n\n      <!-- Tags -->\n      {tags && tags.length > 0 && (\n        <div class=\"mb-4 flex flex-wrap gap-2\">\n          {tags.slice(0, 3).map((tag) => (\n            <span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\">\n              {tag}\n            </span>\n          ))}\n          {tags.length > 3 && (\n            <span class=\"rounded-full bg-theme-bg-muted px-2 py-1 text-xs font-medium text-theme-text-muted\">\n              +{tags.length - 3} more\n            </span>\n          )}\n        </div>\n      )}\n    </div>\n\n    <!-- Post Footer -->\n    <div class=\"flex items-center justify-between pt-4 border-t border-theme-border-muted\">\n      <time \n        datetime={date.toISOString()}\n        class=\"text-sm text-theme-text-tertiary\"\n      >\n        {formattedDate}\n      </time>\n      <a \n        href={postUrl}\n        class=\"inline-flex items-center text-sm font-medium theme-link\"\n      >\n        Read more\n        <svg class=\"ml-1 h-4 w-4\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n        </svg>\n      </a>\n    </div>\n  </div>\n</article>",
+      "structuredPatch": [
+        {
+          "oldStart": 14,
+          "oldLines": 7,
+          "newStart": 14,
+          "newLines": 7,
+          "lines": [
+            "   day: 'numeric',",
+            " }).format(date);",
+            " ",
+            "-const postUrl = `${import.meta.env.SITE}${post.slug}/`;",
+            "+const postUrl = `/${post.slug}/`;",
+            " ---",
+            " ",
+            " <article class=\"theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition\">"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "yarn build",
+      "description": "Rebuild site with simplified URL paths"
+    },
+    "tool_response": {
+      "stdout": "yarn run v1.22.22\n$ astro build\n03:55:54 [content] Syncing content\n03:55:54 [content] Synced content\n03:55:54 [types] Generated 109ms\n03:55:54 [build] output: \"static\"\n03:55:54 [build] mode: \"static\"\n03:55:54 [build] directory: /Users/alialqattan/Projects/myblog/dist/\n03:55:54 [build] Collecting build info...\n03:55:54 [build] \u2713 Completed in 125ms.\n03:55:54 [build] Building static entrypoints...\n03:55:54 [vite] \u2713 built in 401ms\n03:55:54 [build] \u2713 Completed in 414ms.\n\n building client (vite) \n03:55:54 [vite] transforming...\n03:55:56 [vite] \u2713 1733 modules transformed.\n03:55:56 [vite] rendering chunks...\n03:55:56 [vite] computing gzip size...\n03:55:56 [vite] dist/_astro/clone.itS8r_ch.js                                                0.10 kB \u2502 gzip:   0.11 kB\n03:55:56 [vite] dist/_astro/init.Gi6I4Gst.js                                                 0.15 kB \u2502 gzip:   0.13 kB\n03:55:56 [vite] dist/_astro/channel.G1_idvA4.js                                              0.15 kB \u2502 gzip:   0.15 kB\n03:55:56 [vite] dist/_astro/chunk-AACKK3MU.C2wPMzLN.js                                       0.23 kB \u2502 gzip:   0.19 kB\n03:55:56 [vite] dist/_astro/chunk-353BL4L5.DbPU5IVK.js                                       0.26 kB \u2502 gzip:   0.20 kB\n03:55:56 [vite] dist/_astro/chunk-BFAMUDN2.82Izt81Q.js                                       0.27 kB \u2502 gzip:   0.23 kB\n03:55:56 [vite] dist/_astro/stateDiagram-v2-GD6S3NHB.Bvj1mtYh.js                             0.40 kB \u2502 gzip:   0.30 kB\n03:55:56 [vite] dist/_astro/chunk-E2GYISFI.Bhs9fgi2.js                                       0.40 kB \u2502 gzip:   0.30 kB\n03:55:56 [vite] dist/_astro/classDiagram-BGRH5UQR.PMjCR4RZ.js                                0.44 kB \u2502 gzip:   0.31 kB\n03:55:56 [vite] dist/_astro/classDiagram-v2-O24JOBDK.PMjCR4RZ.js                             0.44 kB \u2502 gzip:   0.31 kB\n03:55:56 [vite] dist/_astro/chunk-SKB7J2MH.CEnd-r_u.js                                       0.54 kB \u2502 gzip:   0.38 kB\n03:55:56 [vite] dist/_astro/infoDiagram-XT3IWWJI.BkZok70k.js                                 0.70 kB \u2502 gzip:   0.46 kB\n03:55:56 [vite] dist/_astro/ordinal.BYWQX77i.js                                              1.19 kB \u2502 gzip:   0.57 kB\n03:55:56 [vite] dist/_astro/chunk-67H74DCK.r-Ui3yWd.js                                       1.47 kB \u2502 gzip:   0.66 kB\n03:55:56 [vite] dist/_astro/_basePickBy.BdGuPbwx.js                                          2.62 kB \u2502 gzip:   1.32 kB\n03:55:56 [vite] dist/_astro/arc.CPr9yU51.js                                                  3.48 kB \u2502 gzip:   1.49 kB\n03:55:56 [vite] dist/_astro/diagram-5UYTHUR4.FAAr6zht.js                                     4.09 kB \u2502 gzip:   1.78 kB\n03:55:56 [vite] dist/_astro/defaultLocale.C4B-KCzX.js                                        4.55 kB \u2502 gzip:   2.11 kB\n03:55:56 [vite] dist/_astro/pieDiagram-NIOCPIFQ.CX5wiOUM.js                                  4.96 kB \u2502 gzip:   2.22 kB\n03:55:56 [vite] dist/_astro/linear.BsvBF-Em.js                                               5.70 kB \u2502 gzip:   2.34 kB\n03:55:56 [vite] dist/_astro/diagram-ZTM2IBQH.BdOIpN-8.js                                     5.92 kB \u2502 gzip:   2.49 kB\n03:55:56 [vite] dist/_astro/graph.DyCKSqZx.js                                                5.96 kB \u2502 gzip:   1.90 kB\n03:55:56 [vite] dist/_astro/stateDiagram-XX37X6EN.DQsyinet.js                               10.40 kB \u2502 gzip:   3.65 kB\n03:55:56 [vite] dist/_astro/dagre-FFZHY6LT.CM3ZrgWa.js                                      11.01 kB \u2502 gzip:   4.11 kB\n03:55:56 [vite] dist/_astro/_baseUniq.BZfoGAar.js                                           11.93 kB \u2502 gzip:   4.65 kB\n03:55:56 [vite] dist/_astro/diagram-3EMPZRKU._k8X14Pe.js                                    15.76 kB \u2502 gzip:   5.66 kB\n03:55:56 [vite] dist/_astro/kanban-definition-ILFWEQ3N.Bk6W5hPz.js                          20.20 kB \u2502 gzip:   7.11 kB\n03:55:56 [vite] dist/_astro/sankeyDiagram-4UZDY2LN.D7t1cX-4.js                              22.07 kB \u2502 gzip:   8.09 kB\n03:55:56 [vite] dist/_astro/journeyDiagram-EWQZEKCU.Bwu6qAWv.js                             23.56 kB \u2502 gzip:   8.29 kB\n03:55:56 [vite] dist/_astro/timeline-definition-RI47OAVP.BpeYuWy6.js                        23.59 kB \u2502 gzip:   8.20 kB\n03:55:56 [vite] dist/_astro/gitGraphDiagram-GW3U2K7C.CA6ae_jm.js                            24.14 kB \u2502 gzip:   7.43 kB\n03:55:56 [vite] dist/_astro/erDiagram-R3QVA2FD.sxT20uDY.js                                  25.24 kB \u2502 gzip:   8.75 kB\n03:55:56 [vite] dist/_astro/layout.D1Xvw9DD.js                                              27.24 kB \u2502 gzip:   9.70 kB\n03:55:56 [vite] dist/_astro/requirementDiagram-SO3GGRV7.CUyczslS.js                         30.09 kB \u2502 gzip:   9.32 kB\n03:55:56 [vite] dist/_astro/quadrantDiagram-2OG54O6I.DA51dTLV.js                            33.84 kB \u2502 gzip:   9.84 kB\n03:55:56 [vite] dist/_astro/chunk-6OLS64BW.CxmU5P1w.js                                      36.38 kB \u2502 gzip:  11.72 kB\n03:55:56 [vite] dist/_astro/xychartDiagram-H2YORKM3.CWVKhYJH.js                             40.14 kB \u2502 gzip:  11.25 kB\n03:55:56 [vite] dist/_astro/chunk-QEP2MXWD.iRQMBid2.js                                      45.17 kB \u2502 gzip:  14.48 kB\n03:55:56 [vite] dist/_astro/flowDiagram-PKI6S5ZS.M-ckIYrW.js                                60.40 kB \u2502 gzip:  19.14 kB\n03:55:56 [vite] dist/_astro/ganttDiagram-EK5VF46D.DKYY8OP7.js                               62.63 kB \u2502 gzip:  21.01 kB\n03:55:56 [vite] dist/_astro/c4Diagram-6F6E4RAY.C0wdiUMz.js                                  70.14 kB \u2502 gzip:  19.52 kB\n03:55:56 [vite] dist/_astro/blockDiagram-PHRCVELO.Is8V3i1v.js                               71.55 kB \u2502 gzip:  20.26 kB\n03:55:56 [vite] dist/_astro/sequenceDiagram-ZIKVLSP4.BDonWOum.js                            88.34 kB \u2502 gzip:  25.06 kB\n03:55:56 [vite] dist/_astro/mindmap-definition-CZNETY7S.DOrSkKjL.js                        100.93 kB \u2502 gzip:  28.37 kB\n03:55:56 [vite] dist/_astro/architectureDiagram-NQ2NVSRB.D2SLKcHt.js                       148.21 kB \u2502 gzip:  41.65 kB\n03:55:56 [vite] dist/_astro/katex.DsmCZfJr.js                                              265.43 kB \u2502 gzip:  77.34 kB\n03:55:56 [vite] dist/_astro/treemap-6Y5VK53G.Dap05yTf.js                                   329.21 kB \u2502 gzip:  80.17 kB\n03:55:56 [vite] dist/_astro/cytoscape.esm.lc5uY2iF.js                                      439.73 kB \u2502 gzip: 140.32 kB\n03:55:56 [vite] dist/_astro/MermaidTheme.astro_astro_type_script_index_0_lang.ByavqXF2.js  484.52 kB \u2502 gzip: 135.80 kB\n03:55:56 [vite] \u2713 built in 2.10s\n\n generating static routes \n03:55:56 \u25b6 src/pages/blog.astro\n03:55:56   \u2514\u2500 /blog/index.htmlFetching posts from AlqattanDev/blog-content\nFound 5 markdown files\nContent sources: { local: true, github: true }\nLoaded 7 posts\n (+1.01s) \n03:55:57 \u25b6 src/pages/index.astro\n03:55:57   \u2514\u2500 /index.htmlFetching posts from AlqattanDev/blog-content\nFound 5 markdown files\nContent sources: { local: true, github: true }\nLoaded 7 posts\n (+757ms) \n03:55:58 \u25b6 src/pages/[...slug].astro\n03:55:58   \u251c\u2500 /astro-content-collections/index.html (+1ms) \n03:55:58   \u2514\u2500 /welcome-to-my-blog/index.html (+1ms) \n03:55:58 \u2713 Completed in 1.79s.\n\n03:55:58 [build] 4 page(s) built in 4.43s\n03:55:58 [build] Complete!\nDone in 5.44s.\nwarning package.json: No license field\nwarning ../../package.json: No license field",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false
+    }
+  },
+  {
+    "session_id": "4d3a8057-77d1-4251-87b1-bf5ead0961b0",
+    "transcript_path": "/Users/alialqattan/.claude/projects/-Users-alialqattan-Projects-myblog/4d3a8057-77d1-4251-87b1-bf5ead0961b0.jsonl",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Grep",
+    "tool_input": {
+      "pattern": "href=\"/welcome-to-my-blog/\"",
+      "path": "/Users/alialqattan/Projects/myblog/dist/index.html",
+      "output_mode": "content",
+      "-C": 1
+    },
+    "tool_response": {
+      "mode": "content",
+      "numFiles": 0,
+      "filenames": [],
+      "content": "Sharing thoughts on software development and technology\n</p> </div> <div class=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-1\"> <article class=\"theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition\"> <div class=\"flex flex-col h-full\"> <!-- Hero Image -->  <!-- Post Header --> <div class=\"flex-1\"> <div class=\"mb-3\"> <h2 class=\"text-xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary theme-transition\"> <a href=\"/welcome-to-my-blog/\" class=\"block\"> Welcome to My Blog </a> </h2> <p class=\"mt-2 text-theme-text-secondary line-clamp-3\"> The first post on my new GitHub-synced blog built with Astro </p> </div> <!-- Tags --> <div class=\"mb-4 flex flex-wrap gap-2\"> <span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> welcome </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> astro </span><span class=\"rounded-full bg-theme-accent-primary/10 px-2 py-1 text-xs font-medium text-theme-accent-primary\"> blog </span>  </div> </div> <!-- Post Footer --> <div class=\"flex items-center justify-between pt-4 border-t border-theme-border-muted\"> <time datetime=\"2025-07-16T00:00:00.000Z\" class=\"text-sm text-theme-text-tertiary\"> July 16, 2025 </time> <a href=\"/welcome-to-my-blog/\" class=\"inline-flex items-center text-sm font-medium theme-link\">\nRead more",
+      "numLines": 3
+    }
   }
 ]

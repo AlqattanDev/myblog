@@ -14,7 +14,7 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
   day: 'numeric',
 }).format(date);
 
-const postUrl = `${import.meta.env.BASE_URL}${post.slug}/`;
+const postUrl = `/${post.slug}/`;
 ---
 
 <article class="theme-card group relative shadow-sm hover:shadow-md hover:border-theme-accent-primary theme-transition">
