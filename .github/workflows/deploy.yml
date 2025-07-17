@@ -50,7 +50,7 @@ jobs:
       - name: Build with Astro
         id: astro-build
         env:
-          GITHUB_TOKEN: ${{ secrets.CONTENT_GITHUB_TOKEN }}
+          CONTENT_API_TOKEN: ${{ secrets.CONTENT_GITHUB_TOKEN }}
           CONTENT_REPO_OWNER: ${{ secrets.CONTENT_REPO_OWNER }}
           CONTENT_REPO_NAME: ${{ secrets.CONTENT_REPO_NAME }}
         run: |

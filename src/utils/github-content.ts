@@ -301,13 +301,13 @@ export class GitHubContentFetcher {
   private cache: ContentCache;
 
   constructor() {
-    const token = process.env.GITHUB_TOKEN;
+    const token = process.env.CONTENT_API_TOKEN;
     const owner = process.env.CONTENT_REPO_OWNER;
     const repo = process.env.CONTENT_REPO_NAME;
 
     if (!token || !owner || !repo) {
       throw new Error(
-        'Missing required environment variables: GITHUB_TOKEN, CONTENT_REPO_OWNER, CONTENT_REPO_NAME'
+        'Missing required environment variables: CONTENT_API_TOKEN, CONTENT_REPO_OWNER, CONTENT_REPO_NAME'
       );
     }
 
@@ -327,7 +327,7 @@ export class GitHubContentFetcher {
 
     // Configure content cache
     this.cache = new ContentCache({
-      enabled: process.env.GITHUB_CONTENT_CACHE !== 'false', // Enable by default, disable with env var
+      enabled: process.env.CONTENT_CACHE_ENABLED !== 'false', // Enable by default, disable with env var
       directory: '.github-content-cache',
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
       maxSize: 10 * 1024 * 1024, // 10MB per file
@@ -747,7 +747,7 @@ export class GitHubContentFetcher {
    */
   static isConfigured(): boolean {
     return Boolean(
-      process.env.GITHUB_TOKEN &&
+      process.env.CONTENT_API_TOKEN &&
       process.env.CONTENT_REPO_OWNER &&
       process.env.CONTENT_REPO_NAME
     );
